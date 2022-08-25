@@ -19,6 +19,10 @@
     git clone https://github.com/iarav/ProjetoWeb-JogoDaMemoria.git
 8. No bash, digite: 
     
+    cd ProjetoWeb-JogoDaMemoria
+    
+    git remote add origin ttps://github.com/iarav/ProjetoWeb-JogoDaMemoria.git
+    
     git checkout main
 
 Depois disso você pode usar os arquivos e alterar eles. 
@@ -31,7 +35,7 @@ Terminando de alterar o que você precisa:
     git add *
 2. No bash: 
     
-    git commit -m “explicação rapida do que foi feito/alterado nesse commit”
+    git commit -m “NomeCommit”
 3. No bash:
     
-    git push main
+    git push origin main
