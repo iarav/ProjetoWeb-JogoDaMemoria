@@ -39,3 +39,7 @@ Terminando de alterar o que você precisa:
 3. No bash:
     
     git push origin main
+
+### Links uteis com comandos do git
+⋅⋅* https://gist.github.com/leocomelli/2545add34e4fec21ec16
+⋅⋅* https://woliveiras.com.br/posts/comandos-mais-utilizados-no-git/
