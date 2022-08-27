@@ -1,0 +1,8 @@
+@font-face {
+    font-family: league-script;
+    src: url(/fonts/league-script/LeagueScript.ttf);
+ }
+
+ h1 {
+    font-family: league-script;
+ }
