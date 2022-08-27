@@ -1,0 +1,29 @@
+#conteudo{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#painel{
+    display: grid;
+    width: 75vw;
+    height: 75vh;
+    background-color: white;
+    grid-template-rows: 18vh auto;
+    grid-template-areas: "titulo" "conteudo";
+    align-items: center;
+    justify-content: center;
+}
+#painel div:nth-child(1){
+    grid-area: titulo;
+    display: flex;
+}
+#painel div:nth-child(1) img{
+    margin-bottom: 8px;
+}
+#painel div:nth-child(1) h1{
+    font-family: la-belle;
+    font-size: 4rem;
+    color: #EBAFDE;
+    font-weight: 100;
+    padding: 0px;
+}
