@@ -1,5 +1,63 @@
 #conteudo{
-    height: 86vh;
-    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 70vh;
  }
 
+#historico{
+    width: 22vw;
+    height: 80vh;
+    background: var(--cinza-fundo);
+    margin: 20px 10px 0px 15px;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+#jogo{
+    width: 75vw;
+    height: 80vh;
+    background: var(--cinza-fundo);
+    margin: 20px 15px 0px 0px;
+}
+
+h2{
+    font-family: kranky;
+    margin: 10px 0px 0px 0px;
+    font-weight: 400;
+    font-size: 40px;
+    text-align: center;
+}
+
+.hist-box{
+    width: 18vw;
+    height: 180px;
+    background: white;
+    margin: 10px 0px 10px 17px;
+    border: 1px solid rgba(0, 0, 0, 0.44);
+    border-radius: 15px;
+    padding-top: 13px;
+}
+
+.linha-hist, .linha-hist-dupla{
+    display: flex;
+    flex-direction: row;
+}
+
+.linha-hist p{
+    font-family: laila;
+    font-style: normal;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.p-atributo{
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.p-info{
+    font-weight: 400;
+    margin-left: 5px;
+}
