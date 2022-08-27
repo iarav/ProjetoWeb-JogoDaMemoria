@@ -1,4 +1,5 @@
 @font-face {
+<<<<<<< HEAD
    font-family: league-script;
    src: url(./fonts/league-script/LeagueScript.ttf);
 }
@@ -13,6 +14,30 @@
    --verde-botao: #B4F246;
    --verde-titulo: #259073;
 }
+=======
+    font-family: league-script;
+    src: url(./fonts/league-script/LeagueScript.ttf);
+ }
+
+ @font-face {
+    font-family: kranky;
+    src: url(./fonts/kranky/Kranky.ttf);
+ }
+
+ @font-face {
+    font-family: laila;
+    src: url(./fonts/laila/Laila-Regular.ttf);
+ }
+
+
+ :root {
+    --verde-header: #ECF6D9;
+    --verde-background: #C8E98E;
+    --verde-botao: #B4F246;
+    --verde-titulo: #259073;
+    --cinza-fundo: #F5F5F5;
+ }
+>>>>>>> 84eaa872e799b37ba4f39a849b5afacfbe06f881
 
 body{
    margin: 0;
