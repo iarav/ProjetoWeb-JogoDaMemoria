@@ -3,6 +3,29 @@
     src: url(/fonts/league-script/LeagueScript.ttf);
  }
 
+ :root {
+    --verde-header: #ECF6D9;
+    --verde-background: #C8E98E;
+    --verde-botao: #B4F246;
+    --verde-titulo: #259073;
+ }
+
+ body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/background.svg');
+ }
+
  h1 {
     font-family: league-script;
+    margin: 0;
+    padding-top: 25px;
+    padding-left: 30px;
+    color: var(--verde-titulo);
+ }
+
+ header{
+    height: 85px;
+    background-color: var(--verde-header);
  }
