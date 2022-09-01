@@ -13,11 +13,13 @@
     overflow-y: scroll;
 }
 
-#jogo{
+#iniciar-jogo{
     width: 75vw;
     height: 80vh;
     background: var(--cinza-fundo);
-    margin: 20px 15px 0px 0px;
+    margin: 20px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 h2{
@@ -60,4 +62,66 @@ h2{
 .p-info{
     font-weight: 400;
     margin-left: 5px;
+}
+
+#iniciar-jogo hr {
+    width: 90%;
+}
+
+#forms{
+    width: 90%;
+    height: 65vh;
+    align-self: center;
+}
+
+.modalidade{
+    margin-top: 30px;
+}
+
+#iniciar-jogo h3{
+    font-family: laila;
+    font-style: normal;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+#forms form{
+    margin-top: 10px;
+}
+
+form label{
+    margin-right: 30px;
+}
+
+.botao-jogar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    margin-top: 20vh;
+}
+
+.botao-jogar .jogar{
+    width: 147px;
+    height: 38px;
+    background: #B4F246;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    border: 0 none;
+
+    font-family: laila;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.botao-jogar .jogar{
+    
+}
+
+#jogando{
+    display: none;
 }
