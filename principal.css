@@ -4,6 +4,34 @@
     grid-auto-rows: 70vh;
  }
 
+#cabecalho{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+#cabecalho li{
+    display: inline;
+}
+
+#cabecalho li .ranking{
+    margin-right: 25px;
+    font-family: laila;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #6DA609;
+}
+
+#cabecalho img{
+    width: 38px;
+    height: 38px;
+    padding-left: 25px;
+    border-left: 2px solid #8BB73E;
+}
+
 #historico{
     width: 22vw;
     height: 80vh;
@@ -13,7 +41,7 @@
     overflow-y: scroll;
 }
 
-#iniciar-jogo{
+#iniciar-jogo, #jogando{
     width: 75vw;
     height: 80vh;
     background: var(--cinza-fundo);
@@ -106,18 +134,18 @@ form label{
 .botao-jogar .jogar{
     width: 147px;
     height: 38px;
-    background: #B4F246;
+    background: var(--verde-botao);
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
     border: 0 none;
-
     font-family: laila;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
 }
 
-#jogando{
-    display: none;
+.botao-jogar .jogar a{
+    text-decoration: none;
+    color: black;
 }

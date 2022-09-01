@@ -75,7 +75,7 @@ form .Sem_cadastro{
     left: 509px;
     top: 443px;
  
-    font-family: 'Laila';
+    font-family: laila;
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
@@ -102,7 +102,7 @@ text-align: center;
 cursor: pointer;
 color: #000000;
 border: 0 none;
-background: #B4F246;
+background: var(--verde-botao);
  
 margin: 0px;
 
@@ -119,7 +119,7 @@ form .Botao_entrar{
     /* left: 569px;
     top: 533px; */
  
-    background: #B4F246;
+    background: var(--verde-botao);
     border-radius: 15px;
     display:flex;
     flex-direction: column;
