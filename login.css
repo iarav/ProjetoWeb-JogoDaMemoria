@@ -1,0 +1,128 @@
+#conteudo{
+    background: url(./images/background.svg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginbox {
+    background: white;
+    width: 433px;
+    height: 473px;
+    align-self: center;
+    background: #F5F5F5;
+    margin-top: 20px;
+}
+ 
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.loginbox h2 {
+   
+    font-family: kranky;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+   
+    color: #000000;
+ 
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+ 
+}
+ 
+.Sem_cadastro {
+    font-family: laila;
+    margin: 20px 0px;
+}
+ 
+.loginbox form {
+    padding: 0 0px;
+    box-sizing: border-box;
+}
+ 
+form .txt_field {
+    position: relative;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.txt_field input{
+    font-family: laila;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 31px;  
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #000000;
+ 
+    width: 343px;
+    height: 34px;
+}
+
+
+ 
+form .Sem_cadastro{
+    width: 259px;
+    height: 23px;
+    left: 509px;
+    top: 443px;
+ 
+    font-family: 'Laila';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    text-decoration-line: underline;
+ 
+    color: #0C60C2;
+}
+ 
+input[type=submit] {
+ 
+width: 69px;
+height: 34px;
+
+
+font-family: laila;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 34px;
+ 
+
+text-align: center;
+cursor: pointer;
+color: #000000;
+border: 0 none;
+background: #B4F246;
+ 
+margin: 0px;
+
+/* display: table-cell;
+vertical-align: middle; */
+ 
+padding:0;
+padding-top: 5px;
+}
+ 
+form .Botao_entrar{
+    width: 143px;
+    height: 43px;
+    /* left: 569px;
+    top: 533px; */
+ 
+    background: #B4F246;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}

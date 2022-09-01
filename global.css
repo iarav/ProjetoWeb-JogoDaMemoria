@@ -1,5 +1,4 @@
 @font-face {
-<<<<<<< HEAD
    font-family: league-script;
    src: url(./fonts/league-script/LeagueScript.ttf);
 }
@@ -7,14 +6,7 @@
    font-family: la-belle;
    src: url(./fonts/la_belle_aurore/La_belle_aurore.ttf);
 }
-
-:root {
-   --verde-header: #ECF6D9;
-   --verde-background: #C8E98E;
-   --verde-botao: #B4F246;
-   --verde-titulo: #259073;
-}
-=======
+@font-face {
     font-family: league-script;
     src: url(./fonts/league-script/LeagueScript.ttf);
  }
@@ -29,7 +21,6 @@
     src: url(./fonts/laila/Laila-Regular.ttf);
  }
 
-
  :root {
     --verde-header: #ECF6D9;
     --verde-background: #C8E98E;
@@ -37,7 +28,6 @@
     --verde-titulo: #259073;
     --cinza-fundo: #F5F5F5;
  }
->>>>>>> 84eaa872e799b37ba4f39a849b5afacfbe06f881
 
 body{
    margin: 0;
@@ -58,6 +48,7 @@ header{
    height: 13vh;
    background-color: var(--verde-header);
 }
+
 #conteudo{
    height: 87vh;
 }
