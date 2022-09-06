@@ -39,7 +39,6 @@ body{
 h1 {
    font-family: league-script;
    margin: 0;
-   padding-top: 25px;
    padding-left: 30px;
    color: var(--verde-titulo);
 }
@@ -47,6 +46,9 @@ h1 {
 header{
    height: 13vh;
    background-color: var(--verde-header);
+   display: inline-flex;
+   width: 100%;
+   align-items: center;
 }
 
 #conteudo{

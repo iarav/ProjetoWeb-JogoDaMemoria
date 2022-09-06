@@ -1,0 +1,126 @@
+#conteudo{
+    background: url(./images/background.svg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastrobox {
+    background: white;
+    width: 759px;
+    height: 589px;
+    align-self: center;
+    background: #F5F5F5;
+    margin-top: 20px;
+}
+ 
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.cadastrobox h2 {
+   
+    font-family: kranky;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+   
+    color: #000000;
+ 
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+ 
+}
+ 
+.cadastrobox form {
+    padding: 0 0px;
+    box-sizing: border-box;
+}
+ 
+form .txt_field {
+    position: relative;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.txt_field input{
+    font-family: laila;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 31px;  
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #000000;
+ 
+    width: 710px;
+    height: 31px;
+}
+
+form .txt_field2 {
+    position: relative;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.txt_field2 input{
+    font-family: laila;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 31px;  
+    border: 1px solid #000000;
+    border-radius: 10px;
+    color: #000000;
+ 
+    width: 350px;
+    height: 31px;
+}
+ 
+ 
+input[type=submit] {
+ 
+width: 69px;
+height: 34px;
+
+
+font-family: laila;
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 34px;
+ 
+
+text-align: center;
+cursor: pointer;
+color: #000000;
+border: 0 none;
+background: var(--verde-botao);
+ 
+margin: 0px;
+
+/* display: table-cell;
+vertical-align: middle; */
+ 
+padding:0;
+padding-top: 5px;
+}
+ 
+form .Botao_cadastrar{
+    width: 147px;
+    height: 54px;
+    /* left: 569px;
+    top: 533px; */
+ 
+    background: var(--verde-botao);
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
