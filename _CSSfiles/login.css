@@ -1,16 +1,16 @@
 #conteudo{
-    background: url(./images/background.svg);
+    background: url(../images/background.svg);
     background-size: contain;
     display: flex;
     flex-direction: column;
 }
 
-.cadastrobox {
-    background: white;
-    width: 759px;
-    height: 589px;
+.loginbox {
+    background: var(--branco);
+    width: 433px;
+    height: 473px;
     align-self: center;
-    background: #F5F5F5;
+    background: var(--cinza-fundo);
     margin-top: 20px;
 }
  
@@ -21,15 +21,15 @@
     justify-content: center;
 }
  
-.cadastrobox h2 {
+.loginbox h2 {
    
     font-family: kranky;
     font-style: normal;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 3em;
     line-height: 63px;
    
-    color: #000000;
+    color: var(--preto);
  
     text-align: center;
     margin-top: 0px;
@@ -37,7 +37,12 @@
  
 }
  
-.cadastrobox form {
+.Sem_cadastro {
+    font-family: laila;
+    margin: 20px 0px;
+}
+ 
+.loginbox form {
     padding: 0 0px;
     box-sizing: border-box;
 }
@@ -52,75 +57,67 @@ form .txt_field {
     font-family: laila;
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1em;
     line-height: 31px;  
-    border: 1px solid #000000;
+    border: 1px solid var(--preto);
     border-radius: 10px;
-    color: #000000;
+    color: var(--preto);
  
-    width: 710px;
-    height: 31px;
+    width: 343px;
+    height: 34px;
 }
 
-form .txt_field2 {
-    position: relative;
-    margin: 20px 0px;
-    border-radius: 10px;
-}
 
-.txt_field2 input{
+ 
+form .Sem_cadastro{
+    width: 259px;
+    height: 23px;
+    left: 509px;
+    top: 443px;
+ 
     font-family: laila;
     font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 31px;  
-    border: 1px solid #000000;
-    border-radius: 10px;
-    color: #000000;
- 
-    width: 350px;
-    height: 31px;
+    font-weight: 500;
+    font-size: 0.9em;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: var(--link);
 }
  
- 
-input[type=submit] {
+.entrar{
  
 width: 69px;
 height: 34px;
 
-
-font-family: laila;
-font-style: normal;
-font-weight: 500;
-font-size: 22px;
-line-height: 34px;
- 
-
 text-align: center;
 cursor: pointer;
-color: #000000;
+color: var(--preto);
 border: 0 none;
 background: var(--verde-botao);
  
 margin: 0px;
-
-/* display: table-cell;
-vertical-align: middle; */
  
 padding:0;
 padding-top: 5px;
 }
- 
-form .Botao_cadastrar{
-    width: 147px;
-    height: 54px;
-    /* left: 569px;
-    top: 533px; */
+
+.entrar a, a:visited{
+    font-family: laila;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 34px;
+    text-decoration: none;
+    color: var(--preto);
+}
+
+form .Botao_entrar{
+    width: 143px;
+    height: 43px;
  
     background: var(--verde-botao);
     border-radius: 15px;
     display:flex;
     flex-direction: column;
     align-items: center;
- 
 }

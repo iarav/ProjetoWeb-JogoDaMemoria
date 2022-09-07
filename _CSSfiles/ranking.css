@@ -7,7 +7,7 @@
     display: grid;
     width: 75vw;
     height: 75vh;
-    background-color: white;
+    background-color: var(--branco);
     grid-template-rows: 18vh auto;
     grid-template-areas: "titulo" "conteudo";
     align-items: center;

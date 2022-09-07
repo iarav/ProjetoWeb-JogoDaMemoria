@@ -1,16 +1,16 @@
 #conteudo{
-    background: url(./images/background.svg);
+    background: url(../images/background.svg);
     background-size: contain;
     display: flex;
     flex-direction: column;
 }
 
-.loginbox {
-    background: white;
-    width: 433px;
-    height: 473px;
+.cadastrobox {
+    background: var(--branco);
+    width: 759px;
+    height: 589px;
     align-self: center;
-    background: #F5F5F5;
+    background: var(--cinza-fundo);
     margin-top: 20px;
 }
  
@@ -21,7 +21,7 @@
     justify-content: center;
 }
  
-.loginbox h2 {
+.cadastrobox h2 {
    
     font-family: kranky;
     font-style: normal;
@@ -29,7 +29,7 @@
     font-size: 50px;
     line-height: 63px;
    
-    color: #000000;
+    color: var(--preto);
  
     text-align: center;
     margin-top: 0px;
@@ -37,12 +37,7 @@
  
 }
  
-.Sem_cadastro {
-    font-family: laila;
-    margin: 20px 0px;
-}
- 
-.loginbox form {
+.cadastrobox form {
     padding: 0 0px;
     box-sizing: border-box;
 }
@@ -59,31 +54,34 @@ form .txt_field {
     font-weight: 400;
     font-size: 15px;
     line-height: 31px;  
-    border: 1px solid #000000;
+    border: 1px solid var(--preto);
     border-radius: 10px;
-    color: #000000;
+    color: var(--preto);
  
-    width: 343px;
-    height: 34px;
+    width: 710px;
+    height: 31px;
 }
 
+form .txt_field2 {
+    position: relative;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
 
- 
-form .Sem_cadastro{
-    width: 259px;
-    height: 23px;
-    left: 509px;
-    top: 443px;
- 
+.txt_field2 input{
     font-family: laila;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 15px;
-    line-height: 23px;
-    text-decoration-line: underline;
+    line-height: 31px;  
+    border: 1px solid var(--preto);
+    border-radius: 10px;
+    color: var(--preto);
  
-    color: #0C60C2;
+    width: 350px;
+    height: 31px;
 }
+ 
  
 input[type=submit] {
  
@@ -100,24 +98,19 @@ line-height: 34px;
 
 text-align: center;
 cursor: pointer;
-color: #000000;
+color: var(--preto);
 border: 0 none;
 background: var(--verde-botao);
  
 margin: 0px;
-
-/* display: table-cell;
-vertical-align: middle; */
  
 padding:0;
 padding-top: 5px;
 }
  
-form .Botao_entrar{
-    width: 143px;
-    height: 43px;
-    /* left: 569px;
-    top: 533px; */
+form .Botao_cadastrar{
+    width: 147px;
+    height: 54px;
  
     background: var(--verde-botao);
     border-radius: 15px;

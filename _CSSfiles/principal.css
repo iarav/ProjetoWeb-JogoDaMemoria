@@ -22,14 +22,14 @@
     font-size: 25px;
     text-align: center;
     text-decoration-line: underline;
-    color: #6DA609;
+    color: var(--link-ranking);
 }
 
 #cabecalho img{
     width: 38px;
     height: 38px;
     padding-left: 25px;
-    border-left: 2px solid #8BB73E;
+    border-left: 2px solid var(--link-ranking);
 }
 
 #historico{
@@ -61,7 +61,7 @@ h2{
 .hist-box{
     width: 18vw;
     height: 180px;
-    background: white;
+    background: var(--branco);
     margin: 10px 0px 10px 17px;
     border: 1px solid rgba(0, 0, 0, 0.44);
     border-radius: 15px;
@@ -147,5 +147,5 @@ form label{
 
 .botao-jogar .jogar a{
     text-decoration: none;
-    color: black;
+    color: var(--preto);
 }
