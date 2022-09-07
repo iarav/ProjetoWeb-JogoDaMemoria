@@ -94,7 +94,7 @@
     flex-wrap: wrap;
 }
 
-.botoes button{
+.botoes button, .desistir{
     width: 147px;
     height: 38px;
     border-radius: 15px;
@@ -111,6 +111,9 @@
     background: #D7321C;
     margin-right: 130px;
     margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .botoes-trapaca button{
@@ -131,6 +134,7 @@
     color: var(--branco);
     font-weight: 500;
     text-decoration: none;
+    width: 147px;
 }
 
 @media (max-width:900px) {

@@ -145,9 +145,13 @@ form label{
     font-style: normal;
     font-weight: 500;
     font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .botao-jogar .jogar a{
+    width: 147px;
     text-decoration: none;
     color: var(--preto);
 }
