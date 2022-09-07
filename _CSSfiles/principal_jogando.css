@@ -1,0 +1,27 @@
+#jogando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barra-superior{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+.barra-superior div{
+    width: 200px;
+    background-color: var(--branco);
+    margin: 20px 20px 0px 0px;
+}
+
+.barra-superior h3{
+    font-family: kranky;
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+    color: #259073;
+}
+
+
