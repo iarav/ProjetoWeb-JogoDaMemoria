@@ -56,5 +56,5 @@ header{
 }
 
 #conteudo{
-   height: 87vh;
+   min-height: 87vh;
 }

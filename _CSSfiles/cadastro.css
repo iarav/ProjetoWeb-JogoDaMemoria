@@ -7,13 +7,23 @@
 
 .cadastrobox {
     background: var(--branco);
-    width: 759px;
+    width: 60vw;
     height: 589px;
     align-self: center;
     background: var(--cinza-fundo);
     margin-top: 20px;
+    margin-bottom: 50px;
 }
  
+hr{
+    height:1px;
+    left:437px;
+    top:251px;
+    border-width:0;
+    width:40vw;
+    background-color:rgb(0, 0, 0, 0.6)
+}
+
 .d-flex {
     display: flex;
     flex-direction: column;
@@ -26,13 +36,13 @@
     font-family: kranky;
     font-style: normal;
     font-weight: 400;
-    font-size: 50px;
+    font-size: 3em;
     line-height: 63px;
    
     color: var(--preto);
  
     text-align: center;
-    margin-top: 0px;
+    margin-top: 5px;
     margin-bottom: 0px;
  
 }
@@ -52,13 +62,13 @@ form .txt_field {
     font-family: laila;
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1em;
     line-height: 31px;  
     border: 1px solid var(--preto);
     border-radius: 10px;
     color: var(--preto);
  
-    width: 710px;
+    width: 55vw;
     height: 31px;
 }
 
@@ -72,13 +82,13 @@ form .txt_field2 {
     font-family: laila;
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 1em;
     line-height: 31px;  
     border: 1px solid var(--preto);
     border-radius: 10px;
     color: var(--preto);
- 
-    width: 350px;
+    
+    width: 27vw;
     height: 31px;
 }
  
@@ -86,13 +96,12 @@ form .txt_field2 {
 input[type=submit] {
  
 width: 69px;
-height: 34px;
 
 
 font-family: laila;
 font-style: normal;
 font-weight: 500;
-font-size: 22px;
+font-size: 1.4em;
 line-height: 34px;
  
 
@@ -110,7 +119,7 @@ padding-top: 5px;
  
 form .Botao_cadastrar{
     width: 147px;
-    height: 54px;
+    height: 40px;
  
     background: var(--verde-botao);
     border-radius: 15px;

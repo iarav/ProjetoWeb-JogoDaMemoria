@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-auto-rows: 70vh;
+    width: 95vw;
  }
 
 #cabecalho{
@@ -19,7 +20,7 @@
     font-family: laila;
     font-style: normal;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1.5em;
     text-align: center;
     text-decoration-line: underline;
     color: var(--link-ranking);
@@ -42,10 +43,10 @@
 }
 
 #iniciar-jogo, #jogando{
-    width: 75vw;
+    width: 74vw;
     height: 80vh;
     background: var(--cinza-fundo);
-    margin: 20px 10px 0px 0px;
+    margin: 20px 0px 0px 0px;
     display: flex;
     flex-direction: column;
 }
@@ -54,13 +55,13 @@ h2{
     font-family: kranky;
     margin: 10px 0px 0px 0px;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 2.7em;
     text-align: center;
 }
 
 .hist-box{
     width: 18vw;
-    height: 180px;
+    min-height: 180px;
     background: var(--branco);
     margin: 10px 0px 10px 17px;
     border: 1px solid rgba(0, 0, 0, 0.44);
@@ -71,12 +72,13 @@ h2{
 .linha-hist, .linha-hist-dupla{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .linha-hist p{
     font-family: laila;
     font-style: normal;
-    font-size: 13px;
+    font-size: 0.8em;
     margin-top: 10px;
     margin-right: 0;
     margin-bottom: 0;
@@ -109,7 +111,7 @@ h2{
 #iniciar-jogo h3{
     font-family: laila;
     font-style: normal;
-    font-size: 17px;
+    font-size: 1.1em;
     margin-top: 10px;
     margin-right: 0;
     margin-bottom: 0;
@@ -142,10 +144,33 @@ form label{
     font-family: laila;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .botao-jogar .jogar a{
     text-decoration: none;
     color: var(--preto);
+}
+
+@media (max-width:1000px) {
+    #conteudo{
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+     }
+
+     #historico{
+        width: 90vw;
+        height: 50vh;
+    }
+
+    #iniciar-jogo, #jogando{
+        width: 90vw;
+        height: 80vh;
+        margin-left: 15px;
+        margin-bottom: 50px;
+    }
+
+    .hist-box{
+        width: 80vw;
+    }
 }
