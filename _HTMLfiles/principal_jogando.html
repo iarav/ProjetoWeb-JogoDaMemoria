@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,14 @@
     <link rel="stylesheet" href="../_CSSfiles/global.css">
     <link rel="stylesheet" href="../_CSSfiles/principal_jogando.css">
 </head>
+
 <body>
     <header>
         <h1>Jogo da Memória</h1>
     </header>
     <nav id="cabecalho">
         <ul>
-            <li><a class="ranking" href="#">Ranking Global</a></li>
+            <li><a class="ranking" href="./ranking.html">Ranking Global</a></li>
             <li><a href="#"><img src="../images/userIcon.png" alt="Icone de perfil do usuario"></a></li>
         </ul>
     </nav>
@@ -137,32 +139,94 @@
         </div>
         <div id="jogo">
             <div id="jogando">
-                <div class="barra-superior">
-                    <div class="caixa-duracao">
-                        <h3>Duração:</h3>
-                        <p>0:36</p>
+                <div id="jogo-box">
+                    <div class="cartas-memoria">
+                        <div id="cartas">
+                            <div class="carta-box">
+                                <img src="../images/memorygame/cake.png" alt="bolo de aniversario">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/macaAmor.svg" alt="maça do amor">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/algodaoDoce.jpg" alt="algodão doce">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/cake.png" alt="bolo de aniversario">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/algodaoDoce.jpg" alt="algodão doce">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/minhoquinha.jpg" alt="mala em forma de minhoca">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/açai.jpg" alt="tigela de açaí">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/chiclete.png" alt="chiclete">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/açai.jpg" alt="tigela de açaí">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/macaAmor.svg" alt="maça do amor">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/chichletes.jpg" alt="vários chicletes">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/minhoquinha.jpg" alt="mala em forma de minhoca">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/churros.png" alt="churros">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/chichletes.jpg" alt="vários chicletes">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/chiclete.png" alt="chiclete">
+                            </div>
+                            <div class="carta-box">
+                                <img src="../images/memorygame/churros.png" alt="churros">
+                            </div>
+                        </div>
                     </div>
-                    <div class="caixa-config">
-                        <h3>Configuração:</h3>
-                        <p>4x4</p>
+                    <div class="barra-lateral">
+                        <div id="caixa-modalidade">
+                            <h3>Modalidade:</h3>
+                            <p>Contra o Tempo</p>
+                        </div>
+                        <div id="caixa-duracao">
+                            <h3>Duração:</h3>
+                            <p>0:36</p>
+                        </div>
+                        <div id="caixa-config">
+                            <h3>Configuração:</h3>
+                            <p>4x4</p>
+                        </div>
+                        <div id="caixa-tempo-restante">
+                            <h3>Tempo Restante:</h3>
+                            <p>0:05</p>
+                        </div>
                     </div>
-                    <div class="caixa-tempo-restante">
-                        <h3>Tempo Restante:</h3>
-                        <p>0:05</p>
-                    </div>
-                    <div class="caixa-modalidade">
-                        <h3>Modalidade:</h3>
-                        <p>Contra o Tempo</p>
-                    </div>
-                </div>
-                <div class="cartas-memoria">
-
                 </div>
                 <div class="botoes">
-                    
+                    <div class="desistir">
+                        <a href="./principal_iniciar.html">Desistir</a>
+                    </div>
+                    <div class="botoes-trapaca">
+                        <button id="revelar" type="button">
+                            Revelar Peças
+                        </button>
+                        <button id="recuperar" type="button">
+                            Recuperar Exibição Normal
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>

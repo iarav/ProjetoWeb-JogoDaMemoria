@@ -93,16 +93,15 @@ form .txt_field2 {
 }
  
  
-input[type=submit] {
+.cadastrar {
  
-width: 69px;
+width: 147px;
 
 
 font-family: laila;
 font-style: normal;
 font-weight: 500;
 font-size: 1.4em;
-line-height: 34px;
  
 
 text-align: center;
@@ -110,11 +109,12 @@ cursor: pointer;
 color: var(--preto);
 border: 0 none;
 background: var(--verde-botao);
- 
+border-radius: 15px;
 margin: 0px;
  
 padding:0;
 padding-top: 5px;
+text-decoration: none;
 }
  
 form .Botao_cadastrar{

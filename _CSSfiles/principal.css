@@ -35,7 +35,7 @@
 
 #historico{
     width: 22vw;
-    height: 80vh;
+    height: 86vh;
     background: var(--cinza-fundo);
     margin: 20px 10px 0px 15px;
     align-items: center;
@@ -44,7 +44,7 @@
 
 #iniciar-jogo, #jogando{
     width: 74vw;
-    height: 80vh;
+    min-height: 86vh;
     background: var(--cinza-fundo);
     margin: 20px 0px 0px 0px;
     display: flex;
@@ -145,9 +145,13 @@ form label{
     font-style: normal;
     font-weight: 500;
     font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .botao-jogar .jogar a{
+    width: 147px;
     text-decoration: none;
     color: var(--preto);
 }
@@ -165,7 +169,7 @@ form label{
 
     #iniciar-jogo, #jogando{
         width: 90vw;
-        height: 80vh;
+        min-height: 80vh;
         margin-left: 15px;
         margin-bottom: 50px;
     }

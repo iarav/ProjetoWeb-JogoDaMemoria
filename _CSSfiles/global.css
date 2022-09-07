@@ -55,7 +55,7 @@ h1 {
 }
 
 header{
-   height: 13vh;
+   height: 7vh;
    background-color: var(--verde-header);
    display: inline-flex;
    width: 100%;
@@ -63,5 +63,5 @@ header{
 }
 
 #conteudo{
-   min-height: 87vh;
+   min-height: 93vh;
 }
