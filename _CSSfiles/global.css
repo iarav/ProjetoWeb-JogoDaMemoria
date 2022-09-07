@@ -21,6 +21,12 @@
     src: url(../fonts/laila/Laila-Regular.ttf);
  }
 
+ @font-face {
+   font-family: Laila-Light;
+   src: url(../fonts/laila/Laila-Light.ttf);
+}
+
+
  :root {
     --verde-header: #ECF6D9;
     --verde-background: #C8E98E;
