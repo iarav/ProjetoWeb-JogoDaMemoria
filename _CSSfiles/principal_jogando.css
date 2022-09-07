@@ -1,27 +1,173 @@
 #jogando{
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
-.barra-superior{
+
+#jogo-box{
+    min-width: 70vw;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.barra-superior div{
-    width: 200px;
+.barra-lateral{
+    width: 291px;
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 50px;
+}
+
+.barra-lateral div{
+    width: 180px;
     background-color: var(--branco);
     margin: 20px 20px 0px 0px;
 }
 
-.barra-superior h3{
+.barra-lateral h3{
     font-family: kranky;
-    font-size: 24px;
+    font-size: 1.4em;
+    font-weight: 500;
     text-align: center;
     margin: 0;
-    color: #259073;
+    color: var(--h3-principal);
 }
 
+.barra-lateral p{
+    font-family: laila;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.6em;
+    color: var(--preto);
+    text-align: center;
+    margin: 0;
+}
 
+#caixa-modalidade{
+    width: 255px;
+}
+
+#caixa-modalidade p{
+    font-size: 1.3em;
+}
+
+#caixa-tempo-restante p{
+    color: red;
+}
+
+.cartas-memoria{
+    border: 1px solid var(--preto);
+    width: 49vw;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+#cartas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.carta-box{
+    width: 90px;
+    height: 90px;
+    margin: 5px 10px 5px 0px;
+}
+
+.carta-box img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 1px solid var(--preto);
+    border-radius: 10px;
+    background-color: var(--branco);
+}
+
+.botoes{
+    display: flex;
+    align-self: flex-start;
+    flex-wrap: wrap;
+}
+
+.botoes button{
+    width: 147px;
+    height: 38px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    border: 0 none;
+    font-family: laila;
+    font-style: normal;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.desistir{
+    background: #D7321C;
+    margin-right: 130px;
+    margin-left: 50px;
+}
+
+.botoes-trapaca button{
+    background: var(--verde-botao);
+}
+
+#recuperar{
+    width: 190px;
+    font-size: 0.8em;
+}
+
+.botoes-trapaca button{
+    color: var(--preto);
+    font-weight: 600;
+}
+
+.desistir a{
+    color: var(--branco);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media (max-width:900px) {
+    
+    #jogo-box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carta-box{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .carta-box img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .barra-lateral{
+        padding-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    .botoes{
+        flex-direction: column;
+        align-self: center;
+        align-items: center;
+    }
+
+    .desistir{
+        margin: 0;
+    }
+
+    .botoes-trapaca{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
