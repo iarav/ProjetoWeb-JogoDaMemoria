@@ -53,15 +53,82 @@ h1 {
    padding-left: 30px;
    color: var(--verde-titulo);
 }
-
+/*-----------NAV----------------*/
 header{
    height: 7vh;
    background-color: var(--verde-header);
-   display: inline-flex;
    width: 100%;
+   height: fit-content;
+   display: grid;
+   grid-template-columns: auto auto 100px;
    align-items: center;
 }
+header a{
+   justify-self: end;
+   text-decoration: none;
+   color: inherit;
+   width: fit-content;
+   height: fit-content;
+   border-right: 1px solid rgb(75, 75, 75);
+}
+header a p{
+   padding-right: 10px; margin: 0px;
+   font-family: Laila-Light;
+}
+#nav{
+   justify-self: end;
+   display: flex;
+   width: fit-content;
+   align-items: center;
+   justify-items: end;
+   cursor: pointer;
+   margin-right: 5px;
+}
+#user{
+   display: flex;
+}
+#nav img{
+   max-width: 100%;
+   width: 30px;
+}
+#nav p{
+   font-family: Laila-Light;
+   margin: 0px; padding: 0px;
+}
+#nav p:hover{
+   color: #03751c;
+   font-weight: bolder;
+}
+#logout{
+   position: absolute;
+   top: 40px;
+   right: 8px;
+   visibility: hidden;
+   animation: .2s ease-in forwards;
+}
+#nav:hover #logout{
+   visibility: visible;
+}
 
+#logout div{
+   display: grid;
+   grid-template-rows: auto auto auto;
+   justify-items: center;
+}
+#triangulo-para-cima {
+   justify-self: end;
+   width: 0; 
+   height: 0;
+   border-left: 15px solid transparent;
+   border-right: 15px solid transparent;
+   border-bottom: 15px solid #fafafa;
+ }
+ #logout div #textos{
+   background-color: #ffffff;
+   padding: 0px 4px 0px 4px;
+   border-radius: 8px 0px 8px 8px;
+ }
+/*------------------------------*/
 #conteudo{
    min-height: 93vh;
 }

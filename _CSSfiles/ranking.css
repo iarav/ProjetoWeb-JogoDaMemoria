@@ -33,7 +33,12 @@
     list-style: none;
     padding: 0px;
     width: 98%;
+    overflow-y: scroll;
 }
+#tabela::-webkit-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: black transparent;
+  }
 #tabela li{
     display: flex;
     align-items: center;
@@ -68,6 +73,7 @@
     width: fit-content; height: fit-content;
     padding: 0px; margin: 0px;
     font-family: Laila-Light;
+    white-space:nowrap;
 }
 #tabela .tipo{
     font-weight: bolder;

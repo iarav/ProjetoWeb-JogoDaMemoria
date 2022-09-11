@@ -11,9 +11,9 @@
     git init
 5. Se você nunca usou o git bash digite:
     
-    git config --global user.email “SEUEMAIL”
+    git config --global nav.email “SEUEMAIL”
     
-    git config --global user.name SEUNOME
+    git config --global nav.name SEUNOME
 7. No bash, digite: 
     
     git clone https://github.com/iarav/ProjetoWeb-JogoDaMemoria.git
