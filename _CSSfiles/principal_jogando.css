@@ -67,25 +67,72 @@
     padding: 15px 0;
 }
 
-#cartas{
+#cartas-2x2{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#cartas-4x4{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
+#cartas-6x6{
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#cartas-8x8{
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
 .carta-box{
-    width: 90px;
-    height: 90px;
-    margin: 5px 10px 5px 0px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: var(--verde-carta);
+    padding: 0;
+    border: 0;
 }
 
 .carta-box img{
-    width: 90px;
-    height: 90px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    cursor: pointer;
     object-fit: cover;
-    border: 1px solid var(--preto);
+    border: 1px solid var(--verde-carta);
     border-radius: 10px;
     background-color: var(--branco);
+}
+
+#cartas-2x2 .carta-box{
+    width: 185px;
+    height: 185px;
+}
+
+#cartas-4x4 .carta-box{
+    width: 90px;
+    height: 90px;
+}
+
+#cartas-6x6 .carta-box{
+    width: 57px;
+    height: 57px;
+}
+
+#cartas-8x8 .carta-box{
+    width: 40px;
+    height: 40px;
+}
+
+.carta-box:focus img{
+    visibility: visible;
 }
 
 .botoes{
@@ -137,23 +184,37 @@
     width: 147px;
 }
 
-@media (max-width:900px) {
-    
+@media (max-width:1250px) {
+
     #jogo-box{
         flex-direction: column;
         align-items: center;
     }
 
-    .carta-box{
-        width: 50px;
-        height: 50px;
+    #cartas-2x2 .carta-box{
+        width: 120px;
+        height: 120px;
     }
     
-    .carta-box img{
-        width: 50px;
-        height: 50px;
+    #cartas-4x4 .carta-box{
+        width: 70px;
+        height: 70px;
     }
 
+    #cartas-6x6 .carta-box{
+        width: 45px;
+        height: 45px;
+    }
+    
+    #cartas-8x8 .carta-box{
+        width: 33px;
+        height: 33px;
+    }
+    
+    .cartas-memoria{
+        width: 100%;
+    }
+    
     .barra-lateral{
         padding-top: 0px;
         margin-bottom: 50px;
@@ -167,11 +228,33 @@
 
     .desistir{
         margin: 0;
+        margin-bottom: 10px;
     }
 
     .botoes-trapaca{
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    
+    #conteudo{
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+    }
+
+    #historico{
+        width: 90vw;
+        height: 50vh;
+    }
+
+    #iniciar-jogo, #jogando{
+        width: 90vw;
+        min-height: 80vh;
+        margin-left: 15px;
+        margin-bottom: 50px;
+    }
+
+    .hist-box{
+        width: 80vw;
     }
 }
