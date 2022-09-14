@@ -95,10 +95,16 @@ header .ranking-a p{
 }
 #nav p, #nav a{
    font-family: Laila-Light;
-   margin: 0px; padding: 0px;
+   margin: 0px; 
+   padding: 0px;
    text-decoration: none;
    color: inherit;
 }
+
+#textos a{
+   padding: 5px 20px;
+}
+
 #nav p:hover, #nav a:hover, .ranking-a:hover{
    color: #03751c;
    font-weight: bolder;

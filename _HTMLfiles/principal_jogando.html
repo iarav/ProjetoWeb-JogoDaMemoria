@@ -14,7 +14,9 @@
 <body>
     <header>
         <h1>Jogo da Memória</h1>
-        <a class="ranking-a" href="./ranking.html"><p>Ranking Global</p></a>
+        <a class="ranking-a" href="./ranking.html">
+            <p>Ranking Global</p>
+        </a>
         <div id='nav'>
             <div id="user">
                 <img src="../images/user-icon.svg" alt="icon nav"></img>
@@ -24,7 +26,7 @@
                 <div>
                     <div id="triangulo-para-cima"></div>
                     <div id="textos">
-                        <a href="#">Editar perfil</a>
+                        <a href="./editar_perfil.html">Editar perfil</a>
                         <a href="./login.html">Sair</a>
                     </div>
                 </div>
@@ -150,6 +152,41 @@
         <div id="jogo">
             <div id="jogando">
                 <div id="jogo-box">
+                    <div id="fim-jogo">
+                        <h2>Você Ganhou!</h2>
+                        <div class="linha-fim-jogo">
+                            <div class="linha-fim">
+                                <p class="p-atributo">Dimensão: </p>
+                                <p class="p-info">4x4</p>
+                            </div>
+                            <div class="linha-fim">
+                                <p class="p-atributo">Modalidade: </p>
+                                <p class="p-info">Contra o Tempo</p>
+                            </div>
+                        </div>
+                        <div class="linha-fim-jogo">
+                            <div class="linha-fim">
+                                <p class="p-atributo">Duração: </p>
+                                <p class="p-info">10:00</p>
+                            </div>
+                            <div class="linha-fim">
+                                <p class="p-atributo">Data/Hora: </p>
+                                <p class="p-info">20/06/2022 - 12:05</p>
+                            </div>
+                        </div>
+                        <div class="linha-fim" id="pont-final">
+                            <p class="p-atributo">Pontuação Final: </p>
+                            <p class="p-info">10pts</p>
+                        </div>
+                        <div class="botoes-fim">
+                            <button id="sair" type="button">
+                                <a href="./principal_iniciar.html">Sair</a> 
+                            </button>
+                            <button id="jogar-novamente" type="button">
+                                Jogar Novamente
+                            </button>
+                        </div>
+                    </div>
                     <div class="cartas-memoria">
                         <div id="cartas-2x2">
                             <button class="carta-box">

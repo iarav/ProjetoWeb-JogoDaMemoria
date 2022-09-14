@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../_CSSfiles/global.css">
+    <link rel="stylesheet" href="../_CSSfiles/editar_perfil.css">
+    <title>Editar Perfil</title>
+</head>
+
+<body>
+    <header>
+        <h1>Jogo da Memória</h1>
+    </header>
+    <div id="conteudo">
+        <div class="perfilbox">
+            
+            <h2><img src="../images/user-icon.svg" width="35px" alt="icon nav"></img> Editar Perfil</h2>
+            <hr>
+
+            <form method="post" class="d-flex">
+
+                <div class="txt_field">
+                    <input type="text" required name="Username" placeholder="Username" readonly>
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" required name="Nome Completo" placeholder="Nome Completo">
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" required name="Telefone" placeholder="Telefone">
+                </div>
+
+                <div class="txt_field">
+                    <input type="text" required name="E-mail" placeholder="E-mail">
+                </div>
+
+                <div class="txt_field2">
+                    <input type="date" required name="Data de nascimento:" readonly>
+                    <input type="text" required name="CPF" placeholder="CPF" readonly>
+                </div>
+
+                <div class="txt_field">
+                    <input type="password" required name="Password" placeholder="Password">
+                </div>
+
+                <div class="Botao_salvar">
+                    <a href="./principal_iniciar.html" class="salvar">Salvar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

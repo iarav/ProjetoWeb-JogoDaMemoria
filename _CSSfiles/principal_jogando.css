@@ -10,6 +10,90 @@
     flex-wrap: wrap;
 }
 
+#fim-jogo{
+    visibility: hidden;
+    min-width: 41vw;
+    min-height: 55vh;
+    background-color: #FFD2F5;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    position: absolute;
+    opacity: 0.95;
+    left: 29vw;
+    top: calc(50% - 501px/2 + 45.5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fim-jogo h2{
+    margin-top: 30px;
+}
+
+.linha-fim-jogo, .linha-fim{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.linha-fim-jogo p{
+    font-family: laila;
+    font-style: normal;
+    font-size: 0.8em;
+    margin-top: 15px;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+#pont-final{
+    font-size: 1.3em;
+    margin-top: 25px;
+}
+
+.botoes-fim{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.botoes-fim button{
+    height: 38px;
+    margin: 10px 0;
+}
+
+.botoes-fim button, .botoes-fim a{
+    width: 147px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    border: 0 none;
+    font-family: laila;
+    font-style: normal;
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--preto);
+    font-weight: 600;
+}
+
+#sair{
+    background: #A4D1FA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 30px;
+}
+
+#sair:hover{
+    background: #7fb0df;
+}
+
+#jogar-novamente{
+    background: #6FB1EF;
+}
+
+#jogar-novamente:hover{
+    background: #88c2f8;
+}
+
 .barra-lateral{
     width: 291px;
     display: flex;
@@ -268,5 +352,12 @@
 
     .hist-box{
         width: 80vw;
+    }
+
+    #fim-jogo{
+        min-width: 70vw;
+        min-height: 58vh;
+        left: 13vw;
+        top: 70vh;
     }
 }

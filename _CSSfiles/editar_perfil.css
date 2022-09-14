@@ -1,0 +1,130 @@
+#conteudo{
+    background: url(../images/background.svg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfilbox {
+    background: var(--branco);
+    width: 60vw;
+    height: 589px;
+    align-self: center;
+    background: var(--cinza-fundo);
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+ 
+hr{
+    height:1px;
+    left:437px;
+    top:251px;
+    border-width:0;
+    width:40vw;
+    background-color:rgb(0, 0, 0, 0.6)
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.perfilbox h2 {
+   
+    font-family: kranky;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 63px;
+   
+    color: var(--preto);
+ 
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
+ 
+}
+ 
+.perfilbox form {
+    padding: 0 0px;
+    box-sizing: border-box;
+}
+ 
+form .txt_field {
+    position: relative;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.txt_field input{
+    font-family: laila;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 31px;  
+    border: 1px solid var(--preto);
+    border-radius: 10px;
+    color: var(--preto);
+ 
+    width: 55vw;
+    height: 31px;
+}
+
+form .txt_field2 {
+    position: relative;
+    margin: 20px 0px;
+    border-radius: 10px;
+}
+
+.txt_field2 input{
+    font-family: laila;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 31px;  
+    border: 1px solid var(--preto);
+    border-radius: 10px;
+    color: var(--preto);
+    
+    width: 27vw;
+    height: 31px;
+}
+ 
+ 
+.salvar {
+ 
+width: 147px;
+
+
+font-family: laila;
+font-style: normal;
+font-weight: 500;
+font-size: 1.4em;
+ 
+
+text-align: center;
+cursor: pointer;
+color: var(--preto);
+border: 0 none;
+background: var(--verde-botao);
+border-radius: 15px;
+margin: 0px;
+ 
+padding:0;
+padding-top: 5px;
+text-decoration: none;
+}
+ 
+form .Botao_salvar{
+    width: 147px;
+    height: 40px;
+ 
+    background: var(--verde-botao);
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
