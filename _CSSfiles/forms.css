@@ -5,16 +5,26 @@
     flex-direction: column;
 }
 
-.perfilbox {
+.loginbox, .cadastrobox, .perfilbox {
     background: var(--branco);
-    width: 60vw;
-    height: 589px;
     align-self: center;
     background: var(--cinza-fundo);
     margin-top: 20px;
-    margin-bottom: 50px;
 }
- 
+
+.loginbox{
+    width: 433px;
+    min-height: 473px;
+    margin-bottom: 20px;
+}
+
+.cadastrobox, .perfilbox{
+    width: 60vw;
+    min-height: 589px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+}
+
 hr{
     height:1px;
     left:437px;
@@ -30,9 +40,8 @@ hr{
     align-items: center;
     justify-content: center;
 }
- 
-.perfilbox h2 {
-   
+
+h2 {
     font-family: kranky;
     font-style: normal;
     font-weight: 400;
@@ -44,14 +53,18 @@ hr{
     text-align: center;
     margin-top: 5px;
     margin-bottom: 0px;
- 
+}
+
+.Sem_cadastro {
+    font-family: laila;
+    margin: 20px 0px;
 }
  
-.perfilbox form {
+#conteudo form {
     padding: 0 0px;
     box-sizing: border-box;
 }
- 
+
 form .txt_field {
     position: relative;
     margin: 20px 0px;
@@ -67,7 +80,14 @@ form .txt_field {
     border: 1px solid var(--preto);
     border-radius: 10px;
     color: var(--preto);
- 
+}
+
+.loginbox .txt_field input{
+    width: 343px;
+    height: 34px;
+}
+
+.cadastrobox .txt_field input, .perfilbox .txt_field input{
     width: 55vw;
     height: 31px;
 }
@@ -91,40 +111,66 @@ form .txt_field2 {
     width: 27vw;
     height: 31px;
 }
- 
- 
-.salvar {
- 
-width: 147px;
 
-
-font-family: laila;
-font-style: normal;
-font-weight: 500;
-font-size: 1.4em;
+form .Sem_cadastro{
+    width: 259px;
+    height: 23px;
+    left: 509px;
+    top: 443px;
  
-
-text-align: center;
-cursor: pointer;
-color: var(--preto);
-border: 0 none;
-background: var(--verde-botao);
-border-radius: 15px;
-margin: 0px;
- 
-padding:0;
-padding-top: 5px;
-text-decoration: none;
+    font-family: laila;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9em;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: var(--link);
 }
- 
-form .Botao_salvar{
-    width: 147px;
-    height: 40px;
- 
+
+.entrar, .cadastrar, .salvar{
+    text-align: center;
+    cursor: pointer;
+    color: var(--preto);
+    border: 0 none;
+    background: var(--verde-botao);
+    margin: 0px;
+    padding:0;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.cadastrar, .salvar {
+    font-family: laila;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    text-decoration: none;
+}
+
+.entrar a, a:visited{
+    font-family: laila;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 34px;
+    text-decoration: none;
+    color: var(--preto);
+}
+
+form .Botao_entrar, form .Botao_cadastrar, form .Botao_salvar{
     background: var(--verde-botao);
     border-radius: 15px;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
- 
+}
+
+form .Botao_entrar{
+    width: 143px;
+    height: 43px;
+}
+
+form .Botao_cadastrar, form .Botao_salvar{
+    width: 147px;
+    height: 40px;
 }
