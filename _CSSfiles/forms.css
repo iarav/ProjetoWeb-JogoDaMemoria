@@ -55,6 +55,11 @@ h2 {
     margin-bottom: 0px;
 }
 
+.perfilbox h2 img{
+    width:35px;
+    height: 35px;
+}
+
 .Sem_cadastro {
     font-family: laila;
     margin: 20px 0px;
