@@ -13,8 +13,25 @@
 }
 #painel #titulo{
     grid-area: titulo;
+    display: grid;
+    grid-template-columns: 36% 76%;
+    grid-template-areas: "voltar titulo";
+    justify-items: start;
+    align-items: center;
+}
+#painel #titulo #voltar{
+    grid-area: voltar;
+    width: 30px; height: 30px;
+    margin-left: 5vw;
+}
+#painel #titulo #voltar:hover{
+    width: 45px; height: 45px;
+    margin-left: 4vw;
+    cursor: pointer;
+}
+#painel #titulo div{
+    grid-area: titulo;
     display: flex;
-    justify-content: center;
 }
 #painel #titulo img{
     width: 70px;height: 70px;
@@ -36,9 +53,14 @@
     overflow-y: scroll;
 }
 #tabela::-webkit-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: black transparent;
-  }
+    width: 4px;
+    height: 4px;
+    background-color: #CCCCCC; 
+}
+#tabela::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    border: 3px solid #EBAFDE;
+}
 #tabela li{
     display: flex;
     align-items: center;
