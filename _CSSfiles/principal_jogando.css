@@ -55,12 +55,12 @@
     flex-wrap: wrap;
 }
 
-.botoes-fim button{
+.botoes-fim div{
     height: 38px;
     margin: 10px 0;
 }
 
-.botoes-fim button, .botoes-fim a{
+.botoes-fim div, .botoes-fim div a{
     width: 147px;
     border-radius: 15px;
     text-align: center;
@@ -74,11 +74,14 @@
     font-weight: 600;
 }
 
-#sair{
-    background: #A4D1FA;
+.botoes-fim div{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+#sair{
+    background: #A4D1FA;
     margin-right: 30px;
 }
 
