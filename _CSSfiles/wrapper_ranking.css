@@ -1,0 +1,10 @@
+@media screen and (max-width: 1200px){
+    #painel{
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 950px){
+    #painel{
+        width: 90vw;
+    }
+}
