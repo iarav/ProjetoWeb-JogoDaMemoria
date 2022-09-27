@@ -125,14 +125,6 @@ header .ranking-a p{
    grid-template-rows: auto auto auto;
    justify-items: center;
 }
-#triangulo-para-cima {
-   justify-self: end;
-   width: 0; 
-   height: 0;
-   border-left: 15px solid transparent;
-   border-right: 15px solid transparent;
-   border-bottom: 15px solid #fafafa;
- }
  #logout div #textos{
    background-color: #ffffff;
    padding: 0px 4px 0px 4px;
