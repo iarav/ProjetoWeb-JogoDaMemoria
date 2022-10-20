@@ -55,7 +55,15 @@ function eventos() {
     function listaJogadores(jogador) {
         return `
         <li>
-            <div class="coluna1"><img src="${jogador.doce}" alt="candy"><p>${jogador.nome}</p></div>
+            <div class="coluna1"><img src="${jogador.doce}" alt="candy"><p>${jogador.nome}</p>
+                <div class="info_player">
+                    <div class="linha_info"><div class="tipo">Nome:</div><div class="dado">João</div></div>
+                    <div class="linha_info"><div class="tipo">Dimensão:</div><div class="dado">4x4</div></div>
+                    <div class="linha_info"><div class="tipo">Modalidade:</div><div class="dado">Contra Tempo</div></div>
+                    <div class="linha_info"><div class="tipo">Duração:</div><div class="dado">10:00</div><div class="tipo">Resultado:</div><div class="dado">Vitória</div></div>
+                    <div class="linha_info"><div class="tipo">Data/Hora:</div><div class="dado">11/10/2022 - 12:05</div></div>
+                </div>
+            </div>
             <div class="coluna2">
                 <div class="campo"><img src="../images/ranking_img2.png" alt="time"><p class="tipo">Cozimento:</p><p class="dado">${jogador.cozimento}</p></div>
                 <div class="campo, campo2"><img src="../images/ranking_img3.png" alt="cutlery"><p class="tipo">Porções:</p><p class="dado">${jogador.porcoes}</p></div>
@@ -73,6 +81,19 @@ function eventos() {
     </li>
     ${lista.map(listaJogadores).join('')}
     `;
+
+    nomeJogadores = document.getElementsByClassName('coluna1');
+    
+    for (i = 1; i < nomeJogadores.length; i++) {
+        nomeJogadores[i].addEventListener('mouseover', function(){
+            this.children[2].style.display = "block";
+        });
+        nomeJogadores[i].addEventListener('mouseout', function(){
+            console.log(this.children[2].id);
+            this.children[2].style.display = "none";
+        });
+    };
+
 }
 
 window.addEventListener("load", function () {

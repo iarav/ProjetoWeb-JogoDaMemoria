@@ -51,6 +51,7 @@
     padding: 0px;
     width: 98%;
     overflow-y: scroll;
+    cursor: default;
 }
 #tabela::-webkit-scrollbar {
     width: 4px;
@@ -77,6 +78,7 @@
 }
 #tabela .coluna1{
     width: 48%;
+    position: relative;
 }
 #tabela .coluna2{
     width: 62%;
@@ -123,4 +125,29 @@
     background-color: rgb(110, 110, 110,.3);
     border-radius: 20px;
     padding: 0px; margin: 0px;
+}
+.info_player{
+    display: none;
+    background-color: white;
+    position: absolute; top: 0px; left: 130px;
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    font-family: laila;
+    font-size: 0.7rem;
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 5px 20px;
+ 
+}
+.info_player .linha_info{
+    display: flex;
+    margin-bottom: 5px;
+}
+.info_player .tipo{
+    font-weight: bolder;
+    margin-right: 2px;
+    text-shadow: 0.8px 0.8px 0.8px rgb(134, 134, 134);
+}
+.info_player .dado{
+    margin-right: 2px;
 }
