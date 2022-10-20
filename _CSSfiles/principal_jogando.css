@@ -161,7 +161,7 @@
 }
 
 #cartas-4x4{
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
@@ -220,10 +220,6 @@
 #cartas-8x8 .carta-box{
     width: 40px;
     height: 40px;
-}
-
-.carta-box:focus img{
-    visibility: visible;
 }
 
 .botoes{
