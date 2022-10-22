@@ -49,6 +49,27 @@ function eventos() {
             'cozimento': '10min',
             'porcoes': '4x4',
             'avaliacao': '130 pts'
+        },
+        {
+            'doce': '../images/ranking_img1.png',
+            'nome': 'Pedro G.',
+            'cozimento': '10min',
+            'porcoes': '4x4',
+            'avaliacao': '130 pts'
+        },
+        {
+            'doce': '../images/ranking_img1.png',
+            'nome': 'Rafael F.',
+            'cozimento': '10min',
+            'porcoes': '4x4',
+            'avaliacao': '130 pts'
+        },
+        {
+            'doce': '../images/ranking_img1.png',
+            'nome': 'Gabriel F.',
+            'cozimento': '10min',
+            'porcoes': '4x4',
+            'avaliacao': '130 pts'
         }
     ];
 
@@ -89,7 +110,6 @@ function eventos() {
             this.children[2].style.display = "block";
         });
         nomeJogadores[i].addEventListener('mouseout', function(){
-            console.log(this.children[2].id);
             this.children[2].style.display = "none";
         });
     };
