@@ -34,13 +34,13 @@
     display: flex;
 }
 #painel #titulo img{
-    width: 70px;height: 70px;
+    width: 60px;height: 60px;
     max-width: 100%;
     margin-top: 1rem;
 }
 #painel #titulo h1{
     font-family: la-belle;
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #EBAFDE;
     font-weight: 100;
     padding: 0px;
@@ -50,23 +50,15 @@
     list-style: none;
     padding: 0px;
     width: 98%;
-    overflow-y: scroll;
     cursor: default;
-}
-#tabela::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-    background-color: #CCCCCC; 
-}
-#tabela::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    border: 3px solid #EBAFDE;
+    margin: 0px; margin-bottom: 5px;
 }
 #tabela li{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin:2px 0px 2px 0px;
+    font-size: 0.8rem;
 }
 .coluna1, .coluna2{
     display: flex;
@@ -96,7 +88,7 @@
 }
 #tabela img{
     display: inline;
-    width: 30px;height: 30px;
+    width: 19px;height: 20px;
     margin: 0px !important;
 }
 #tabela p{
@@ -115,7 +107,7 @@
 }
 #tabela li:nth-child(1) p{
     font-family: kranky;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 .linha{
     width: 100%;
@@ -127,6 +119,7 @@
     padding: 0px; margin: 0px;
 }
 .info_player{
+    z-index: 9999;
     display: none;
     background-color: white;
     position: absolute; top: 0px; left: 130px;
