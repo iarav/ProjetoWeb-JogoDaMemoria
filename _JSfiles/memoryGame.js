@@ -1,12 +1,65 @@
-const dimensao = 8;
-const qntImg = (dimensao*dimensao)/2;
+let dimensao;
+let modalidade;
+let qntImg;
 let alreadyUsed = [], clickedCards = [], turnedCards = [];
 let contentCard = [], pairs=0,idImg = 0, lastClicked=null;
 let contentCardRandom = ``, idx;
 
 window.onload = function(){
-    insertCards2();
+    
 }
+
+function mostrarDimensao(){
+    var dimen;
+
+    var radios = document.getElementsByName('dimensao');
+
+    for (var i = 0, length = radios.length; i < length; i++) {
+      if (radios[i].checked) {
+        
+        dimen = radios[i].value;
+        console.log(dimen);
+    
+        break;
+      }
+    }
+    if(dimen == "2x2"){
+        dimensao =2;
+    }
+    if(dimen == "4x4"){
+        dimensao =4;
+    }
+    if(dimen == "6x6"){
+        dimensao =6;
+    }
+    if(dimen == "8x8"){
+        dimensao =8;
+    }
+    console.log(dimensao);
+
+    document.getElementById('dimensao-p').innerHTML = dimen;
+}
+
+function mostrarModalidade (){
+var mod;
+
+var  mod1 = document.getElementsByName('modalidade');
+
+    for (var i = 0, length = mod1.length; i < length; i++) {
+      if (mod1[i].checked) {
+        
+        mod = mod1[i].value;
+        console.log(mod);
+    
+        break;
+      }
+    }
+
+    document.getElementById('modalidade-p').innerHTML = mod;
+
+}
+
+
 
 function jogarNovamente(){
     let imagens = document.getElementsByClassName("img-card");
@@ -183,11 +236,14 @@ function verifyBoard2(idx){
 function startGame(){
     document.getElementById("iniciar-jogo").style.display = "none";
     document.getElementById("jogando").style.display = "flex";
+    mostrarDimensao();
+    mostrarModalidade();
+    qntImg = (dimensao*dimensao)/2;
+    insertCards2();
 }
 
 function sair(){
-    document.getElementById("jogando").style.display = "none";
-    document.getElementById("iniciar-jogo").style.display = "flex";
+    window.location.reload(true);
 }
 
 const candies = [
