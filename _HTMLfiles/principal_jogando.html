@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../_CSSfiles/principal.css">
     <link rel="stylesheet" href="../_CSSfiles/global.css">
     <link rel="stylesheet" href="../_CSSfiles/principal_jogando.css">
+    <link rel="stylesheet" href="../_CSSfiles/principal_iniciar.css">
     <script src="../_JSfiles/memoryGame.js"></script>
 </head>
 
@@ -151,6 +152,39 @@
             </div>
         </div>
         <div id="jogo">
+            <div id="iniciar-jogo">
+                <h2>Iniciar Jogo</h2>
+                <hr>
+                <div id="forms">
+                    <div class="dimensao">
+                        <h3>Dimensão:</h3>
+                        <form>
+                            <input type="radio" id="2x2" name="dimensao" value="2x2">
+                            <label for="2x2">2x2</label>
+                            <input type="radio" id="4x4" name="dimensao" value="4x4">
+                            <label for="4x4">4x4</label>
+                            <input type="radio" id="6x6" name="dimensao" value="6x6">
+                            <label for="6x6">6x6</label>
+                            <input type="radio" id="8x8" name="dimensao" value="8x8">
+                            <label for="8x8">8x8</label>
+                        </form> 
+                    </div>
+                    <div class="modalidade">
+                        <h3>Modalidade:</h3>
+                        <form id="form_jogar">
+                            <input type="radio" id="Classica" name="modalidade" value="Classica">
+                            <label for="Classica">Classica</label>
+                            <input type="radio" id="ContraTempo" name="modalidade" value="ContraTempo">
+                            <label for="ContraTempo">Contra o Tempo</label>
+                        </form> 
+                    </div>
+                    <div class="botao-jogar">
+                        <div class="jogar">
+                            <a href="#" onclick="startGame()">Iniciar Jogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="jogando">
                 <div id="jogo-box">
                     <div id="fim-jogo">
@@ -180,8 +214,8 @@
                             <p class="p-info">10pts</p>
                         </div>
                         <div class="botoes-fim">
-                            <div id="sair">
-                                <a href="./principal_iniciar.html">Sair</a> 
+                            <div id="sair" onclick="sair()">
+                                <a href="#">Sair</a> 
                             </div>
                             <div id="jogar-novamente" onclick="jogarNovamente()">
                                 <a href="#">Jogar Novamente</a>
@@ -218,8 +252,8 @@
                     </div>
                 </div>
                 <div class="botoes">
-                    <div class="desistir">
-                        <a href="./principal_iniciar.html">Desistir</a>
+                    <div class="desistir" onclick="sair()">
+                        <a href="#">Desistir</a>
                     </div>
                     <div class="botoes-trapaca">
                         <button onclick="revelarPecas()" id="revelar" type="button">

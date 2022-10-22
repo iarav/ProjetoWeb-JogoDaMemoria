@@ -180,6 +180,16 @@ function verifyBoard2(idx){
     }
 }
 
+function startGame(){
+    document.getElementById("iniciar-jogo").style.display = "none";
+    document.getElementById("jogando").style.display = "flex";
+}
+
+function sair(){
+    document.getElementById("jogando").style.display = "none";
+    document.getElementById("iniciar-jogo").style.display = "flex";
+}
+
 const candies = [
     {
         'id':1,
