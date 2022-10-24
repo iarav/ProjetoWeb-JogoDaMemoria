@@ -59,6 +59,15 @@ var  mod1 = document.getElementsByName('modalidade');
 
 }
 
+function mostrarDuracao(){
+    var cont = 0;
+
+    document.getElementById("dura-p").innerHTML= cont;
+        setInterval(() => {
+        document.getElementById("dura-p").innerHTML=cont;
+        cont++;
+    }, 1000);
+}
 
 
 function jogarNovamente(){
@@ -107,6 +116,9 @@ function checkVictory(){
         setTimeout(() => { 
             document.getElementById("fim-jogo").style.visibility = "visible";
         }, 200);
+        if(cont == 1000000){
+            clearInterval(timer);
+        }
     }
 }
 
@@ -238,6 +250,7 @@ function startGame(){
     document.getElementById("jogando").style.display = "flex";
     mostrarDimensao();
     mostrarModalidade();
+    mostrarDuracao();
     qntImg = (dimensao*dimensao)/2;
     insertCards2();
 }
