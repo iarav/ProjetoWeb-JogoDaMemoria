@@ -60,12 +60,21 @@ var  mod1 = document.getElementsByName('modalidade');
 }
 
 function mostrarDuracao(){
-    var cont = 0;
+    
+    var timer = document.getElementById("dura-p").innerHTML;
+    var arr = timer.split(":");
+    var min = arr[0];
+    var sec = arr[1];
 
-    document.getElementById("dura-p").innerHTML= cont;
         setInterval(() => {
-        document.getElementById("dura-p").innerHTML=cont;
-        cont++;
+        document.getElementById("dura-p").innerHTML= min + ":" + sec;
+        sec++;
+
+        if (sec == 60){
+            min++;
+            sec = 0;
+        }
+             
     }, 1000);
 }
 
