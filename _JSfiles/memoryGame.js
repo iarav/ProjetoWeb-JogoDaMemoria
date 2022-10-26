@@ -4,6 +4,7 @@ let qntImg;
 let alreadyUsed = [], clickedCards = [], turnedCards = [];
 let contentCard = [], pairs=0,idImg = 0, lastClicked=null;
 let contentCardRandom = ``, idx;
+let intervaloDuracao;
 
 window.onload = function(){
     
@@ -49,12 +50,13 @@ var  mod1 = document.getElementsByName('modalidade');
       if (mod1[i].checked) {
         
         mod = mod1[i].value;
-        console.log(mod);
+        if(mod == "Classica"){
+            document.getElementById("caixa-tempo-restante").style.display="none";        
+        }
     
         break;
       }
     }
-
     document.getElementById('modalidade-p').innerHTML = mod;
 
 }
@@ -66,16 +68,30 @@ function mostrarDuracao(){
     var min = arr[0];
     var sec = arr[1];
 
-        setInterval(() => {
-        document.getElementById("dura-p").innerHTML= min + ":" + sec;
+    function myTimer() {
+        let strmin = '', strsec='';
+        if(sec<10 && sec!=="00"){
+            strsec = '0';
+        }else{
+            strsec = '';
+        }
+    
+        if(min<10 && min!="00"){
+            strmin = '0';
+        }else{
+            strmin = '';
+        }
+
+        document.getElementById("dura-p").innerHTML= strmin + min + ":" + strsec + sec;
         sec++;
 
         if (sec == 60){
             min++;
             sec = 0;
         }
-             
-    }, 1000);
+    }
+    
+    intervaloDuracao = setInterval(myTimer, 1000);
 }
 
 
@@ -123,11 +139,14 @@ function recuperarExibicao(){
 function checkVictory(){
     if(pairs==qntImg){
         setTimeout(() => { 
+            
             document.getElementById("fim-jogo").style.visibility = "visible";
+            clearInterval(intervaloDuracao);
         }, 200);
         if(cont == 1000000){
-            clearInterval(timer);
-        }
+            clearInterval(intervaloDuracao);
+        }  
+        
     }
 }
 
@@ -183,47 +202,7 @@ function listaCandies(candies) {
     `
 }
 
-// function verifyBoard(candie, arr, x){
-//     let inBoard = false;
-//     for (let i = 0; i < arr.length; i++){
-//         if(arr[i]==candie.id){
-//             inBoard=true;
-//         }
-//     }
-//     if(inBoard==false){
-//         contentCard += listaCandies(candie);
-//         arr.push(candie.id);
-//     }else{      
-//         let idran = getRandomId(x);
-//         verifyBoard(candies[idran],arr,x);
-//     }
-// }
-
-// function getRandomId(x){
-//     //Para pegar json aleatório:
-//     if(x==1){
-//         return Math.floor(Math.random() * qntImg);
-//     }else{
-//         return (Math.floor(Math.random() * alreadyUsed.length));
-//     }
-// }
-
-// function insertCards(){
-//     let idTab = getId();
-//     document.getElementById(idTab).style.display = "grid";
-//     for(let i = 0; i<qntImg; i++){
-//         let idran = getRandomId(1);
-//         verifyBoard(candies[idran], alreadyUsed,1);
-//     }
-//     for(let i = 0; i<qntImg; i++){
-//         const card = getRandomId(2);
-//         verifyBoard(candies[card], cards,2);
-//     }
-//     console.log(contentCard);
-//     document.getElementById(idTab).innerHTML = contentCard;
-// }
-
-function insertCards2(){
+function insertCards(){
     let idTab = getId();
     document.getElementById(idTab).style.display = "grid";
     for(let i = 0; i<qntImg; i++){
@@ -233,12 +212,12 @@ function insertCards2(){
 
     for(let i = 0; i<qntImg*2;i++){
         idx = Math.floor(Math.random() * idImg);
-        verifyBoard2(idx);
+        verifyBoard(idx);
     }
     document.getElementById(idTab).innerHTML = contentCardRandom;
 }
 
-function verifyBoard2(idx){
+function verifyBoard(idx){
     let inBoard = false;
     for (let i = 0; i < alreadyUsed.length; i++){
         if(alreadyUsed[i]==idx){
@@ -250,7 +229,7 @@ function verifyBoard2(idx){
         contentCardRandom += contentCard[idx];
     }else{
         idx = Math.floor(Math.random() * idImg);
-        verifyBoard2(idx);
+        verifyBoard(idx);
     }
 }
 
@@ -261,7 +240,7 @@ function startGame(){
     mostrarModalidade();
     mostrarDuracao();
     qntImg = (dimensao*dimensao)/2;
-    insertCards2();
+    insertCards();
 }
 
 function sair(){
