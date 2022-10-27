@@ -180,7 +180,7 @@ form .Botao_cadastrar, form .Botao_salvar{
     height: 40px;
 }
 
-#titulo{
+.titulo{
     display: grid;
     grid-template-columns: 36% 76%;
     grid-template-areas: "voltar titulo";
@@ -188,11 +188,17 @@ form .Botao_cadastrar, form .Botao_salvar{
     align-items: center;
 }
 
-#titulo #voltar:hover{
-    cursor: pointer;
+#titulo-editar-perfil{
+    grid-template-columns: 16% 64%;
 }
 
-#painel #titulo div{
+.titulo #voltar:hover{
+    cursor: pointer;
+    width: 45px; height: 45px;
+    margin-left: 4vw;
+}
+
+#painel .titulo div{
     grid-area: titulo;
     display: flex;
 }

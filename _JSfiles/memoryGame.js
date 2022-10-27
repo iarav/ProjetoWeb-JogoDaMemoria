@@ -1,5 +1,5 @@
-let dimensao;
-let modalidade;
+let dimensao=null;
+let modalidade=null;
 let qntImg;
 let alreadyUsed = [], clickedCards = [], turnedCards = [];
 let contentCard = [], pairs=0,idImg = 0, lastClicked=null;
@@ -36,9 +36,8 @@ function mostrarDimensao(){
     if(dimen == "8x8"){
         dimensao =8;
     }
-    console.log(dimensao);
 
-    document.getElementById('dimensao-p').innerHTML = dimen;
+    
 }
 
 function mostrarModalidade (){
@@ -57,8 +56,7 @@ var  mod1 = document.getElementsByName('modalidade');
         break;
       }
     }
-    document.getElementById('modalidade-p').innerHTML = mod;
-
+    modalidade = mod;
 }
 
 function mostrarDuracao(){
@@ -234,13 +232,22 @@ function verifyBoard(idx){
 }
 
 function startGame(){
-    document.getElementById("iniciar-jogo").style.display = "none";
-    document.getElementById("jogando").style.display = "flex";
     mostrarDimensao();
-    mostrarModalidade();
-    mostrarDuracao();
-    qntImg = (dimensao*dimensao)/2;
-    insertCards();
+    mostrarModalidade();  
+    if(modalidade!=null&&dimensao!=null){
+        mostrarDuracao();
+        document.getElementById('modalidade-p').innerHTML = modalidade;
+        document.getElementById('dimensao-p').innerHTML = dimensao + "x" + dimensao;
+        document.getElementById("iniciar-jogo").style.display = "none";
+        document.getElementById("jogando").style.display = "flex";
+        qntImg = (dimensao*dimensao)/2;
+        insertCards();
+    }else{
+        document.getElementById("preencha-tudo").style.display="block";
+        document.getElementById("preencha-tudo").style.animation="none";
+        setTimeout(() => document.getElementById("preencha-tudo").style.animation="preencha 0.3s linear", 5);
+    }
+    
 }
 
 function sair(){

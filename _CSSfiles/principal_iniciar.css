@@ -61,6 +61,24 @@ form label{
     color: var(--preto);
 }
 
+#preencha-tudo{
+    color: red;
+    display: none;
+    animation: none;
+}
+
+@keyframes preencha{
+    0%{
+        font-weight: 600;
+    }
+    50%{
+        font-weight: 700;
+    }
+    100%{
+        font-weight: 600;
+    }
+}
+
 @media (max-width:1000px) {
     #conteudo{
         grid-template-columns: 1fr;
