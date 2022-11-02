@@ -6,6 +6,8 @@ let contentCard = [], pairs=0,idImg = 0, lastClicked=null;
 let contentCardRandom = ``, idx;
 let intervaloDuracao;
 let intervaloTempo;
+var min;
+var sec;
 
 window.onload = function(){
     
@@ -27,15 +29,23 @@ function mostrarDimensao(){
     }
     if(dimen == "2x2"){
         dimensao =2;
+        min = 1;
+        sec = 0;
     }
     if(dimen == "4x4"){
         dimensao =4;
+        min = 2;
+        sec = 0;
     }
     if(dimen == "6x6"){
         dimensao =6;
+        min = 4;
+        sec = 0;
     }
     if(dimen == "8x8"){
         dimensao =8;
+        min = 8;
+        sec = 0;
     }
 
     
@@ -95,39 +105,32 @@ function mostrarDuracao(){
 
 function mostrarTempo(){
 
-    // if(dimen == "2x2"){
-    //     var min = 1;
-    //     var sec = 00;
-    // }
-    // if(dimen == "4x4"){
-    //     var min = 2;
-    //     var sec = 00;
-    // }
-    // if(dimen == "6x6"){
-    //     var min = 4;
-    //     var sec = 00;
-    // }
-    // if(dimen == "8x8"){
-    //     var min = 8;
-    //     var sec = 00;
-    // }
-
-    var min = 0;
-    var sec =5;
-
     function myTimer2(){
-       
-        if (sec == 0){
+
+        if (sec == -1){
             sec = 59;
             min = min -1;
         }
         if (min == 0 && sec==0){
             clearInterval(intervaloTempo);
             clearInterval(intervaloDuracao);
-
+            checkVictory();
         }
 
-        document.getElementById("tempo-p").innerHTML=  min + ":" + sec;
+        let strmin = '', strsec='';
+        if(sec<10 && sec!=="00"){
+            strsec = '0';
+        }else{
+            strsec = '';
+        }
+    
+        if(min<10 && min!="00"){
+            strmin = '0';
+        }else{
+            strmin = '';
+        }
+
+        document.getElementById("tempo-p").innerHTML=  strmin + min + ":" + strsec + sec;
         sec--;
     }
 
@@ -181,13 +184,31 @@ function checkVictory(){
             
             document.getElementById("fim-jogo").style.visibility = "visible";
             clearInterval(intervaloDuracao);
+            clearInterval(intervaloTempo);
         }, 200);
+
         if(cont == 1000000){
             clearInterval(intervaloDuracao);
+            clearInterval(intervaloTempo);
         }  
         
     }
+
+    if(min ==0 && sec == 0){
+        setTimeout(() => { 
+            
+            document.getElementById("winOrLose").innerHTML = "Você Perdeu!";
+            document.getElementById("fim-jogo").style.visibility = "visible";
+            clearInterval(intervaloDuracao);
+            clearInterval(intervaloTempo);
+        }, 200);
+
+
+    }
+
 }
+
+
 
 function cardClicked(id){
     if(document.getElementById(id).style.visibility!="visible"){
