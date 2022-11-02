@@ -5,6 +5,7 @@ let alreadyUsed = [], clickedCards = [], turnedCards = [];
 let contentCard = [], pairs=0,idImg = 0, lastClicked=null;
 let contentCardRandom = ``, idx;
 let intervaloDuracao;
+let intervaloTempo;
 
 window.onload = function(){
     
@@ -92,6 +93,46 @@ function mostrarDuracao(){
     intervaloDuracao = setInterval(myTimer, 1000);
 }
 
+function mostrarTempo(){
+
+    // if(dimen == "2x2"){
+    //     var min = 1;
+    //     var sec = 00;
+    // }
+    // if(dimen == "4x4"){
+    //     var min = 2;
+    //     var sec = 00;
+    // }
+    // if(dimen == "6x6"){
+    //     var min = 4;
+    //     var sec = 00;
+    // }
+    // if(dimen == "8x8"){
+    //     var min = 8;
+    //     var sec = 00;
+    // }
+
+    var min = 0;
+    var sec =5;
+
+    function myTimer2(){
+       
+        if (sec == 0){
+            sec = 59;
+            min = min -1;
+        }
+        if (min == 0 && sec==0){
+            clearInterval(intervaloTempo);
+            clearInterval(intervaloDuracao);
+
+        }
+
+        document.getElementById("tempo-p").innerHTML=  min + ":" + sec;
+        sec--;
+    }
+
+    intervaloTempo = setInterval(myTimer2, 1000);
+}
 
 function jogarNovamente(){
     let imagens = document.getElementsByClassName("img-card");
@@ -236,6 +277,7 @@ function startGame(){
     mostrarModalidade();  
     if(modalidade!=null&&dimensao!=null){
         mostrarDuracao();
+        mostrarTempo();
         document.getElementById('modalidade-p').innerHTML = modalidade;
         document.getElementById('dimensao-p').innerHTML = dimensao + "x" + dimensao;
         document.getElementById("iniciar-jogo").style.display = "none";
