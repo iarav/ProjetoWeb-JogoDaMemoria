@@ -1,13 +1,4 @@
-let dimensao=null;
-let modalidade=null;
-let qntImg;
-let alreadyUsed = [], clickedCards = [], turnedCards = [];
-let contentCard = [], pairs=0,idImg = 0, lastClicked=null;
-let contentCardRandom = ``, idx;
-let intervaloDuracao;
-let intervaloTempo;
-let min,minContra,sec,secContra
-let duracao=0;
+//Váriaveis de tempo atual:
 const date = new Date();
 let day = date.getDate();
 let month = date.getMonth() + 1;
@@ -15,51 +6,77 @@ let year = date.getFullYear();
 let minutes = date.getMinutes();
 let hour = date.getHours();
 
-window.onload = function(){
-    
+//variaveis obtidas do formulário
+let dimensao=null, modalidade=null;
+
+//variaveis do jogo
+let qntImg;
+let alreadyUsed = [], clickedCards = [], turnedCards = [];
+let contentCard = [], pairs=0,idImg = 0, lastClicked=null;
+let contentCardRandom = ``, idx;
+
+//váriaveis para contagem de tempo
+let intervaloDuracao;
+let intervaloTempo;
+let min,minContra,sec,secContra;
+let duracao=0;
+
+//função chamada ao clicar no botão de iniciar jogo
+function startGame(){
+    mostrarDimensao();
+    mostrarModalidade();  
+    if(modalidade!=null&&dimensao!=null){
+        mostrarDuracao();
+        document.getElementById('modalidade-p').innerHTML = modalidade;
+        document.getElementById('dimensao-p').innerHTML = dimensao + "x" + dimensao;
+        document.getElementById("iniciar-jogo").style.display = "none";
+        document.getElementById("jogando").style.display = "flex";
+        qntImg = (dimensao*dimensao)/2;
+        insertCards();
+    }else{
+        document.getElementById("preencha-tudo").style.display="block";
+        document.getElementById("preencha-tudo").style.animation="none";
+        setTimeout(() => document.getElementById("preencha-tudo").style.animation="preencha 0.3s linear", 5);
+    }
 }
 
+//função de verificar a fimensão do jogo
 function mostrarDimensao(){
     var dimen;
-
     var radios = document.getElementsByName('dimensao');
 
     for (var i = 0, length = radios.length; i < length; i++) {
       if (radios[i].checked) {
-        
         dimen = radios[i].value;
-    
         break;
       }
     }
     if(dimen == "2x2"){
-        dimensao =2;
+        dimensao = 2;
         minContra = 0;
-        secContra = 30;
+        secContra = 10;
     }
     if(dimen == "4x4"){
-        dimensao =4;
-        minContra = 1;
-        secContra = 0;
+        dimensao = 4;
+        minContra = 0;
+        secContra = 40;
     }
     if(dimen == "6x6"){
-        dimensao =6;
+        dimensao = 6;
         minContra = 1;
         secContra = 30;
     }
     if(dimen == "8x8"){
         dimensao =8;
-        minContra = 8;
+        minContra = 5;
         secContra = 0;
     }
-
-    
 }
 
+//função de verificar a modalidade do jogo
 function mostrarModalidade (){
 var mod;
-
-var  mod1 = document.getElementsByName('modalidade');
+var mod1 = document.getElementsByName('modalidade');
 
     for (var i = 0, length = mod1.length; i < length; i++) {
       if (mod1[i].checked) {
@@ -78,8 +95,8 @@ var  mod1 = document.getElementsByName('modalidade');
     modalidade = mod;
 }
 
-function mostrarDuracao(){
-    
+//função de contar a duração do jogo
+function mostrarDuracao(){ 
     var timer = document.getElementById("dura-p").innerHTML;
     var arr = timer.split(":");
     min = arr[0];
@@ -108,10 +125,10 @@ function mostrarDuracao(){
             sec = 0;
         }
     }
-    
     intervaloDuracao = setInterval(myTimer, 1000);
 }
 
+//função de contar o contra tempo do jogo
 function mostrarTempo(){
 
     function myTimer2(){
@@ -146,18 +163,7 @@ function mostrarTempo(){
     intervaloTempo = setInterval(myTimer2, 1000);
 }
 
-function jogarNovamente(){
-    let imagens = document.getElementsByClassName("img-card");
-    for (let i = 0; i < imagens.length; i++) {
-        imagens[i].style.visibility = "hidden";
-    }
-    alreadyUsed = [], clickedCards = [], turnedCards = [];
-    contentCard = [], pairs = 0, idImg = 0, lastClicked=null;
-    contentCardRandom = ``, idx = 0;
-    document.getElementById("fim-jogo").style.visibility = "hidden";
-
-}
-
+//funçaõ que mostra as cartas do jogo
 function revelarPecas(){
     let imagens = document.getElementsByClassName("img-card");
     for (let i = 0; i < imagens.length; i++) {
@@ -165,6 +171,7 @@ function revelarPecas(){
     }
 }
 
+//função que recupera a exibição de antes de clicar em revelar peças
 function recuperarExibicao(){
     let imagens = document.getElementsByClassName("img-card");
     for (let i = 0; i < imagens.length; i++) {
@@ -181,12 +188,10 @@ function recuperarExibicao(){
     if(lastClicked!=null){
         document.getElementById(lastClicked).style.visibility = "visible";
     }
-    
 }
 
+//função que checa se o jogador venceu ou perdeu o jogo
 function checkVictory(){
-
-    
     if(pairs==qntImg){
         setTimeout(() => { 
             caixaTexto()
@@ -194,15 +199,7 @@ function checkVictory(){
             clearInterval(intervaloDuracao);
             clearInterval(intervaloTempo);
         }, 200);
-
-        // if(cont == 1000000){
-        //     duracao = min + ":" + sec;
-        //     clearInterval(intervaloDuracao);
-        //     clearInterval(intervaloTempo);
-        // }  
-        
     }
-
     if(minContra ==0 && secContra == 0){
         setTimeout(() => { 
             document.getElementById("winOrLose").innerHTML = "Você Perdeu!";
@@ -211,22 +208,10 @@ function checkVictory(){
             clearInterval(intervaloDuracao);
             clearInterval(intervaloTempo);
         }, 200);
-
-
     }
-
 }
 
-function caixaTexto(){
-let currentDate = `${day}/${month}/${year} - ${hour}:${minutes}`;
-document.getElementById("dim-valor").innerHTML = dimensao + "x" + dimensao;
-document.getElementById("mod-valor").innerHTML = modalidade;
-document.getElementById("dur-valor").innerHTML = duracao ;
-document.getElementById("pont-valor").innerHTML = pairs + "pts";
-document.getElementById("dat-valor").innerHTML = currentDate;
-}
-
-
+//função para quando uma carta é selecionada
 function cardClicked(id){
     if(document.getElementById(id).style.visibility!="visible"){
         document.getElementById(id).style.visibility="visible";
@@ -254,7 +239,7 @@ function cardClicked(id){
     }
 }
 
-
+//função para pegar o id de acordo com a dimensão
 function getId(){
     switch(dimensao){
         case 2:
@@ -270,6 +255,7 @@ function getId(){
     }
 }
 
+//função que retorna uma carta em html
 function listaCandies(candies) {
     idImg++;
     return `
@@ -279,6 +265,7 @@ function listaCandies(candies) {
     `
 }
 
+//função que insere as cartas no jogo
 function insertCards(){
     let idTab = getId();
     document.getElementById(idTab).style.display = "grid";
@@ -294,6 +281,7 @@ function insertCards(){
     document.getElementById(idTab).innerHTML = contentCardRandom;
 }
 
+//função que verifica as cartas no jogo e as situação delas
 function verifyBoard(idx){
     let inBoard = false;
     for (let i = 0; i < alreadyUsed.length; i++){
@@ -310,29 +298,38 @@ function verifyBoard(idx){
     }
 }
 
-function startGame(){
-    mostrarDimensao();
-    mostrarModalidade();  
-    if(modalidade!=null&&dimensao!=null){
-        mostrarDuracao();
-        document.getElementById('modalidade-p').innerHTML = modalidade;
-        document.getElementById('dimensao-p').innerHTML = dimensao + "x" + dimensao;
-        document.getElementById("iniciar-jogo").style.display = "none";
-        document.getElementById("jogando").style.display = "flex";
-        qntImg = (dimensao*dimensao)/2;
-        insertCards();
-    }else{
-        document.getElementById("preencha-tudo").style.display="block";
-        document.getElementById("preencha-tudo").style.animation="none";
-        setTimeout(() => document.getElementById("preencha-tudo").style.animation="preencha 0.3s linear", 5);
-    }
-    
+//função que altera a div de fim de jogo
+function caixaTexto(){
+    let currentDate = `${day}/${month}/${year} - ${hour}:${minutes}`;
+    document.getElementById("dim-valor").innerHTML = dimensao + "x" + dimensao;
+    document.getElementById("mod-valor").innerHTML = modalidade;
+    document.getElementById("dur-valor").innerHTML = duracao ;
+    document.getElementById("pont-valor").innerHTML = pairs + "pts";
+    document.getElementById("dat-valor").innerHTML = currentDate;
 }
 
+//função que recomeça o jogo com as mesmas configurações
+function jogarNovamente(){ 
+    document.getElementById("dura-p").innerHTML = "00:00";
+    let imagens = document.getElementsByClassName("img-card");       
+    mostrarDimensao();
+    mostrarModalidade();
+    mostrarDuracao();
+    for (let i = 0; i < imagens.length; i++) {
+        imagens[i].style.visibility = "hidden";
+    }
+    alreadyUsed = [], clickedCards = [], turnedCards = [];
+    contentCard = [], pairs = 0, idImg = 0, lastClicked=null;
+    contentCardRandom = ``, idx = 0;
+    document.getElementById("fim-jogo").style.visibility = "hidden";
+}
+
+//função que sai do jogo e volta para o formulário inicial
 function sair(){
     window.location.reload(true);
 }
 
+//contante com as informaçoes de todos os doces e suas imagens usados no jogo
 const candies = [
     {
         'id':1,
