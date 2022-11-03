@@ -194,6 +194,7 @@ function recuperarExibicao(){
 function checkVictory(){
     if(pairs==qntImg){
         setTimeout(() => { 
+            document.getElementById("winOrLose").innerHTML = "Você Ganhou!";
             caixaTexto()
             document.getElementById("fim-jogo").style.visibility = "visible";
             clearInterval(intervaloDuracao);
