@@ -6,8 +6,14 @@ let contentCard = [], pairs=0,idImg = 0, lastClicked=null;
 let contentCardRandom = ``, idx;
 let intervaloDuracao;
 let intervaloTempo;
-var min;
-var sec;
+let min,minContra,sec,secContra
+let duracao=0;
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+let minutes = date.getMinutes();
+let hour = date.getHours();
 
 window.onload = function(){
     
@@ -22,30 +28,29 @@ function mostrarDimensao(){
       if (radios[i].checked) {
         
         dimen = radios[i].value;
-        console.log(dimen);
     
         break;
       }
     }
     if(dimen == "2x2"){
         dimensao =2;
-        min = 1;
-        sec = 0;
+        minContra = 0;
+        secContra = 30;
     }
     if(dimen == "4x4"){
         dimensao =4;
-        min = 2;
-        sec = 0;
+        minContra = 1;
+        secContra = 0;
     }
     if(dimen == "6x6"){
         dimensao =6;
-        min = 4;
-        sec = 0;
+        minContra = 1;
+        secContra = 30;
     }
     if(dimen == "8x8"){
         dimensao =8;
-        min = 8;
-        sec = 0;
+        minContra = 8;
+        secContra = 0;
     }
 
     
@@ -64,6 +69,9 @@ var  mod1 = document.getElementsByName('modalidade');
             document.getElementById("caixa-tempo-restante").style.display="none";        
         }
     
+        if (mod == "Contra o Tempo"){
+            mostrarTempo();
+        }
         break;
       }
     }
@@ -74,8 +82,8 @@ function mostrarDuracao(){
     
     var timer = document.getElementById("dura-p").innerHTML;
     var arr = timer.split(":");
-    var min = arr[0];
-    var sec = arr[1];
+    min = arr[0];
+    sec = arr[1];
 
     function myTimer() {
         let strmin = '', strsec='';
@@ -92,6 +100,7 @@ function mostrarDuracao(){
         }
 
         document.getElementById("dura-p").innerHTML= strmin + min + ":" + strsec + sec;
+        duracao = strmin + min + ":" + strsec + sec;
         sec++;
 
         if (sec == 60){
@@ -107,31 +116,31 @@ function mostrarTempo(){
 
     function myTimer2(){
 
-        if (sec == -1){
-            sec = 59;
-            min = min -1;
+        if (secContra == -1){
+            secContra = 59;
+            minContra = minContra -1;
         }
-        if (min == 0 && sec==0){
+        if (minContra == 0 && secContra==0){
             clearInterval(intervaloTempo);
             clearInterval(intervaloDuracao);
             checkVictory();
         }
 
         let strmin = '', strsec='';
-        if(sec<10 && sec!=="00"){
+        if(secContra<10 && secContra!=="00"){
             strsec = '0';
         }else{
             strsec = '';
         }
     
-        if(min<10 && min!="00"){
+        if(minContra<10 && minContra!="00"){
             strmin = '0';
         }else{
             strmin = '';
         }
 
-        document.getElementById("tempo-p").innerHTML=  strmin + min + ":" + strsec + sec;
-        sec--;
+        document.getElementById("tempo-p").innerHTML=  strmin + minContra + ":" + strsec + secContra;
+        secContra--;
     }
 
     intervaloTempo = setInterval(myTimer2, 1000);
@@ -158,7 +167,6 @@ function revelarPecas(){
 
 function recuperarExibicao(){
     let imagens = document.getElementsByClassName("img-card");
-    console.log(imagens);
     for (let i = 0; i < imagens.length; i++) {
         let x = false;
         for(let j = 0; j < turnedCards.length; j++){
@@ -171,33 +179,34 @@ function recuperarExibicao(){
         }
     }
     if(lastClicked!=null){
-        console.log("last clicked: " + lastClicked);
-        console.log(imagens[lastClicked]);
         document.getElementById(lastClicked).style.visibility = "visible";
     }
     
 }
 
 function checkVictory(){
+
+    
     if(pairs==qntImg){
         setTimeout(() => { 
-            
+            caixaTexto()
             document.getElementById("fim-jogo").style.visibility = "visible";
             clearInterval(intervaloDuracao);
             clearInterval(intervaloTempo);
         }, 200);
 
-        if(cont == 1000000){
-            clearInterval(intervaloDuracao);
-            clearInterval(intervaloTempo);
-        }  
+        // if(cont == 1000000){
+        //     duracao = min + ":" + sec;
+        //     clearInterval(intervaloDuracao);
+        //     clearInterval(intervaloTempo);
+        // }  
         
     }
 
-    if(min ==0 && sec == 0){
+    if(minContra ==0 && secContra == 0){
         setTimeout(() => { 
-            
             document.getElementById("winOrLose").innerHTML = "Você Perdeu!";
+            caixaTexto();
             document.getElementById("fim-jogo").style.visibility = "visible";
             clearInterval(intervaloDuracao);
             clearInterval(intervaloTempo);
@@ -208,6 +217,14 @@ function checkVictory(){
 
 }
 
+function caixaTexto(){
+let currentDate = `${day}/${month}/${year} - ${hour}:${minutes}`;
+document.getElementById("dim-valor").innerHTML = dimensao + "x" + dimensao;
+document.getElementById("mod-valor").innerHTML = modalidade;
+document.getElementById("dur-valor").innerHTML = duracao ;
+document.getElementById("pont-valor").innerHTML = pairs + "pts";
+document.getElementById("dat-valor").innerHTML = currentDate;
+}
 
 
 function cardClicked(id){
@@ -298,7 +315,6 @@ function startGame(){
     mostrarModalidade();  
     if(modalidade!=null&&dimensao!=null){
         mostrarDuracao();
-        mostrarTempo();
         document.getElementById('modalidade-p').innerHTML = modalidade;
         document.getElementById('dimensao-p').innerHTML = dimensao + "x" + dimensao;
         document.getElementById("iniciar-jogo").style.display = "none";
