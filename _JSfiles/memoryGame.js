@@ -339,40 +339,40 @@ function showHistory(){
             'modalidade':'Contra o Tempo',
             'duracao':'10:00',
             'resultado':'Derrota',
-            'data/hora':'20/06/2022 - 12:05'
+            'data_hora':'20/06/2022 - 12:05'
         }
     ];
 
-    function boxHist(){
-        return
-        `<div class="hist-box">
+    function boxHist(jogador){
+        return `
+        <div class="hist-box">
             <div class="linha-hist">
                 <p class="p-atributo">Nome: </p>
-                <p class="p-info">Joao da cunha</p>
+                <p class="p-info">${jogador.nome}</p>
             </div>
             <div class="linha-hist">
                 <p class="p-atributo">Dimensão: </p>
-                <p class="p-info">4x4</p>
+                <p class="p-info">${jogador.dimensao}</p>
             </div>
             <div class="linha-hist">
                 <p class="p-atributo">Modalidade: </p>
-                <p class="p-info">Contra o Tempo</p>
+                <p class="p-info">${jogador.modalidade}</p>
             </div>
             <div class="linha-hist-dupla">
                 <div class="linha-hist">
                     <p class="p-atributo">Duração: </p>
-                    <p class="p-info">10:00</p>
+                    <p class="p-info">${jogador.duracao}</p>
                 </div>
                 <div class="linha-hist">
                     <p class="p-atributo">Resultado: </p>
-                    <p class="p-info">Derrota</p>
+                    <p class="p-info">${jogador.resultado}</p>
                 </div>
             </div>
             <div class="linha-hist">
                 <p class="p-atributo">Data/Hora: </p>
-                <p class="p-info">20/06/2022 - 12:05</p>
+                <p class="p-info">${jogador.data_hora}</p>
             </div>
-        </div>`
+        </div>`;
     }
 
     document.getElementById('historico').innerHTML +=`
