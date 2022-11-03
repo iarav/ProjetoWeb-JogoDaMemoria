@@ -199,6 +199,7 @@ function checkVictory(){
             document.getElementById("fim-jogo").style.visibility = "visible";
             clearInterval(intervaloDuracao);
             clearInterval(intervaloTempo);
+            showHistory();
         }, 200);
     }
     if(minContra ==0 && secContra == 0){
@@ -328,6 +329,56 @@ function jogarNovamente(){
 //função que sai do jogo e volta para o formulário inicial
 function sair(){
     window.location.reload(true);
+}
+
+function showHistory(){
+
+    const lista  = [
+        {
+            'nome':'Joao da Cunha',
+            'dimensao':'4x4',
+            'modalidade':'Contra o Tempo',
+            'duracao':'10:00',
+            'resultado':'Derrota',
+            'data/hora':'20/06/2022 - 12:05'
+        }
+    ];
+
+    function boxHist(){
+        return
+        `<div class="hist-box">
+            <div class="linha-hist">
+                <p class="p-atributo">Nome: </p>
+                <p class="p-info">Joao da cunha</p>
+            </div>
+            <div class="linha-hist">
+                <p class="p-atributo">Dimensão: </p>
+                <p class="p-info">4x4</p>
+            </div>
+            <div class="linha-hist">
+                <p class="p-atributo">Modalidade: </p>
+                <p class="p-info">Contra o Tempo</p>
+            </div>
+            <div class="linha-hist-dupla">
+                <div class="linha-hist">
+                    <p class="p-atributo">Duração: </p>
+                    <p class="p-info">10:00</p>
+                </div>
+                <div class="linha-hist">
+                    <p class="p-atributo">Resultado: </p>
+                    <p class="p-info">Derrota</p>
+                </div>
+            </div>
+            <div class="linha-hist">
+                <p class="p-atributo">Data/Hora: </p>
+                <p class="p-info">20/06/2022 - 12:05</p>
+            </div>
+        </div>`
+    }
+
+    document.getElementById('historico').innerHTML +=`
+    ${lista.map(boxHist).join('')}
+    `;
 }
 
 //contante com as informaçoes de todos os doces e suas imagens usados no jogo
