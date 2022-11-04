@@ -21,6 +21,10 @@ let intervaloTempo;
 let min,minContra,sec,secContra;
 let duracao=0;
 
+window.addEventListener("load", function () {
+    showHistory();
+});
+
 //função chamada ao clicar no botão de iniciar jogo
 function startGame(){
     mostrarDimensao();
@@ -334,6 +338,54 @@ function sair(){
 function showHistory(){
 
     const lista  = [
+        {
+            'nome':'Joao da Cunha',
+            'dimensao':'4x4',
+            'modalidade':'Contra o Tempo',
+            'duracao':'10:00',
+            'resultado':'Derrota',
+            'data_hora':'20/06/2022 - 12:05'
+        },
+        {
+            'nome':'Joao da Cunha',
+            'dimensao':'4x4',
+            'modalidade':'Contra o Tempo',
+            'duracao':'10:00',
+            'resultado':'Derrota',
+            'data_hora':'20/06/2022 - 12:05'
+        },
+        {
+            'nome':'Joao da Cunha',
+            'dimensao':'4x4',
+            'modalidade':'Contra o Tempo',
+            'duracao':'10:00',
+            'resultado':'Derrota',
+            'data_hora':'20/06/2022 - 12:05'
+        },
+        {
+            'nome':'Joao da Cunha',
+            'dimensao':'4x4',
+            'modalidade':'Contra o Tempo',
+            'duracao':'10:00',
+            'resultado':'Derrota',
+            'data_hora':'20/06/2022 - 12:05'
+        },
+        {
+            'nome':'Joao da Cunha',
+            'dimensao':'4x4',
+            'modalidade':'Contra o Tempo',
+            'duracao':'10:00',
+            'resultado':'Derrota',
+            'data_hora':'20/06/2022 - 12:05'
+        },
+        {
+            'nome':'Joao da Cunha',
+            'dimensao':'4x4',
+            'modalidade':'Contra o Tempo',
+            'duracao':'10:00',
+            'resultado':'Derrota',
+            'data_hora':'20/06/2022 - 12:05'
+        },
         {
             'nome':'Joao da Cunha',
             'dimensao':'4x4',
