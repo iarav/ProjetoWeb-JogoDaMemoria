@@ -203,7 +203,7 @@ function checkVictory(){
             document.getElementById("fim-jogo").style.visibility = "visible";
             clearInterval(intervaloDuracao);
             clearInterval(intervaloTempo);
-            showHistory();
+            addHistory();
         }, 200);
     }
     if(minContra ==0 && secContra == 0){
@@ -335,6 +335,58 @@ function sair(){
     window.location.reload(true);
 }
 
+//função que adiciona o resultado do jogo no histórico
+function addHistory(){
+
+    const lista  = [
+        {
+            'nome':'Luis Francisco',
+            'dimensao':'4x4',
+            'modalidade':'Contra o Tempo',
+            'duracao':'10:00',
+            'resultado':'Derrota',
+            'data_hora':'20/06/2022 - 12:05'
+        },
+    ]
+
+    function boxHist(jogador){
+        return `
+        <div class="hist-box">
+            <div class="linha-hist">
+                <p class="p-atributo">Nome: </p>
+                <p class="p-info">${jogador.nome}</p>
+            </div>
+            <div class="linha-hist">
+                <p class="p-atributo">Dimensão: </p>
+                <p class="p-info">${jogador.dimensao}</p>
+            </div>
+            <div class="linha-hist">
+                <p class="p-atributo">Modalidade: </p>
+                <p class="p-info">${jogador.modalidade}</p>
+            </div>
+            <div class="linha-hist-dupla">
+                <div class="linha-hist">
+                    <p class="p-atributo">Duração: </p>
+                    <p class="p-info">${jogador.duracao}</p>
+                </div>
+                <div class="linha-hist">
+                    <p class="p-atributo">Resultado: </p>
+                    <p class="p-info">${jogador.resultado}</p>
+                </div>
+            </div>
+            <div class="linha-hist">
+                <p class="p-atributo">Data/Hora: </p>
+                <p class="p-info">${jogador.data_hora}</p>
+            </div>
+        </div>`;
+    }
+
+    document.getElementById('historico').innerHTML +=`
+    ${lista.map(boxHist).join('')}
+    `;
+}
+
+//função que mostra o histórico do jogador
 function showHistory(){
 
     const lista  = [
