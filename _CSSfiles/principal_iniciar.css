@@ -46,19 +46,24 @@ form label{
     text-align: center;
     cursor: pointer;
     border: 0 none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+
+.botao-jogar .jogar button{
+    width: 147px;
+    background: var(--verde-botao);
+    border: none;
+    text-decoration: none;
+    color: var(--preto);
     font-family: laila;
     font-style: normal;
     font-weight: 500;
     font-size: 1.2em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.botao-jogar .jogar a{
-    width: 147px;
-    text-decoration: none;
-    color: var(--preto);
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 #preencha-tudo{

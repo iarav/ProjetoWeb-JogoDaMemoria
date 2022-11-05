@@ -56,12 +56,7 @@
     flex-wrap: wrap;
 }
 
-.botoes-fim div{
-    height: 38px;
-    margin: 10px 0;
-}
-
-.botoes-fim div, .botoes-fim div a{
+.botoes-fim button{
     width: 147px;
     border-radius: 15px;
     text-align: center;
@@ -73,12 +68,15 @@
     text-decoration: none;
     color: var(--preto);
     font-weight: 600;
-}
-
-.botoes-fim div{
+    height: 38px;
+    margin: 10px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.botoes-fim button p{
+    width: 147px;
 }
 
 #sair{
@@ -242,6 +240,12 @@
     margin-bottom: 10px;
 }
 
+.desistir p{
+    color: var(--branco);
+    font-weight: 500;
+    width: 100%;
+}
+
 .desistir{
     background: #D7321C;
     margin-right: 130px;
@@ -271,13 +275,6 @@
 .botoes-trapaca button{
     color: var(--preto);
     font-weight: 600;
-}
-
-.desistir a{
-    color: var(--branco);
-    font-weight: 500;
-    text-decoration: none;
-    width: 147px;
 }
 
 @media (max-width:1250px) {

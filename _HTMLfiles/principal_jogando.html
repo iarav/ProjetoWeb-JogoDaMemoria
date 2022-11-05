@@ -69,7 +69,7 @@
                     <p id="preencha-tudo">&#x26A0; Preencha todos os campos para continuar!! </p>
                     <div class="botao-jogar">
                         <div class="jogar">
-                            <a href="#" onclick="startGame()">Iniciar Jogo</a>
+                            <button onclick="startGame()">Iniciar Jogo</button>
                         </div>
                     </div>
                 </div>
@@ -103,12 +103,12 @@
                             <p id="pont-valor" class="p-info">10pts</p>
                         </div>
                         <div class="botoes-fim">
-                            <div id="sair" onclick="sair()">
-                                <a href="#">Sair</a> 
-                            </div>
-                            <div id="jogar-novamente" onclick="jogarNovamente()">
-                                <a href="#">Jogar Novamente</a>
-                            </div>
+                            <button id="sair" onclick="sair()">
+                               <p>Sair</p>  
+                            </button>
+                            <button id="jogar-novamente" onclick="jogarNovamente()">
+                                <p>Jogar Novamente</p> 
+                            </button>
                         </div>
                     </div>
 
@@ -143,9 +143,9 @@
                     </div>
                 </div>
                 <div class="botoes">
-                    <div class="desistir" onclick="sair()">
-                        <a href="#">Desistir</a>
-                    </div>
+                    <button class="desistir" onclick="sair()">
+                        <p>Desistir</p>
+                    </button>
                     <div class="botoes-trapaca">
                         <button onclick="revelarPecas()" id="revelar" type="button">
                             Revelar Peças
