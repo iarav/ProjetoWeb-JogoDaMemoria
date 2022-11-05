@@ -116,9 +116,6 @@ header .ranking-a p{
    visibility: hidden;
    animation: .2s ease-in forwards;
 }
-#nav:hover #logout{
-   visibility: visible;
-}
 
 #logout div{
    display: grid;
