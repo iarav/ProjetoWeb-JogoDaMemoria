@@ -7,6 +7,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="../_CSSfiles/forms.css">
     <link rel="stylesheet" href="../_CSSfiles/global.css">
+    <script src="../_JSfiles/forms.js"></script>
 </head>
 
 <body>
@@ -21,12 +22,14 @@
             <form method="post" class="d-flex">
 
                 <div class="txt_field">
-                    <input type="text" required name="Username" placeholder="Username">
+                    <input type="text" required id="Username" placeholder="Username">
                 </div>
 
                 <div class="txt_field">
-                    <input type="password" required name="Senha" placeholder="Senha">
+                    <input type="password" required id="Senha" placeholder="Senha">
                 </div>
+
+                <p id="preencha-tudo">&#x26A0; Preencha todos os campos para continuar!! </p>
 
                 <div class="Sem_cadastro">
                     <a href="./cadastro.html">Não tem cadastro? Cadastre-se aqui</a>
@@ -34,7 +37,7 @@
 
                 <div class="Botao_entrar">
                     <div class="entrar">
-                        <a href="./principal_jogando.html">Entrar</a>
+                        <a id="entrar" onclick="getUserLog()">Entrar</a>
                     </div>
                 </div>
             </form>

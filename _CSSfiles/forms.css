@@ -210,3 +210,21 @@ form .Botao_cadastrar, form .Botao_salvar{
     margin-left: 5vw;
     margin-top: 20px;
 }
+
+#preencha-tudo{
+    color: red;
+    display: none;
+    animation: none;
+}
+
+@keyframes preencha{
+    0%{
+        font-weight: 600;
+    }
+    50%{
+        font-weight: 700;
+    }
+    100%{
+        font-weight: 600;
+    }
+}
