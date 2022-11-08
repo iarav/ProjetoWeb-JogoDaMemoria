@@ -70,13 +70,6 @@
     font-weight: 600;
     height: 38px;
     margin: 10px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.botoes-fim button p{
-    width: 147px;
 }
 
 #sair{
@@ -240,19 +233,14 @@
     margin-bottom: 10px;
 }
 
-.desistir p{
-    color: var(--branco);
-    font-weight: 500;
-    width: 100%;
-}
-
 .desistir{
     background: #D7321C;
     margin-right: 130px;
     margin-left: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    color: var(--branco);
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
 }
 
 .desistir:hover{
