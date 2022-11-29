@@ -14,7 +14,7 @@
 <body>
     <header>
         <h1>Jogo da Memória</h1>
-        <a class="ranking-a" href="./principal_jogando.html"><p>Página do Jogo</p></a>
+        <a class="ranking-a" href="./principal_jogando.php"><p>Página do Jogo</p></a>
         <div id='nav' onclick="abrirLogout()">
             <div id="user">
                 <img src="../images/user-icon.svg" alt="icon nav">
@@ -23,8 +23,8 @@
             <div id='logout'>
                 <div>
                     <div id="textos">
-                        <a href="./editar_perfil.html">Editar perfil</a>
-                        <a href="./login.html">Sair</a>
+                        <a href="./editar_perfil.php">Editar perfil</a>
+                        <a href="./login.php">Sair</a>
                     </div>
                 </div>
             </div>

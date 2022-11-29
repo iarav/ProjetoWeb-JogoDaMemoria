@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="../_CSSfiles/principal_jogando.css">
     <link rel="stylesheet" href="../_CSSfiles/principal_iniciar.css">
     <script src="../_JSfiles/memoryGame.js"></script>
+    <script src="../_JSfiles/historicoPartidas.js"></script>
     <script src="../_JSfiles/header.js"></script>
 </head>
 
 <body>
     <header>
         <h1>Jogo da Memória</h1>
-        <a class="ranking-a" href="./ranking.html">
+        <a class="ranking-a" href="./ranking.php">
             <p>Ranking Global</p>
         </a>
         <div id='nav' onclick="abrirLogout()">
@@ -29,8 +30,8 @@
                 <div>
                     <div id="triangulo-para-cima"></div>
                     <div id="textos">
-                        <a href="./editar_perfil.html">Editar perfil</a>
-                        <a href="./login.html">Sair</a>
+                        <a href="./editar_perfil.php">Editar perfil</a>
+                        <a href="./login.php">Sair</a>
                     </div>
                 </div>
             </div>

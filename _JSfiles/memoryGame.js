@@ -21,10 +21,6 @@ let intervaloTempo;
 let min,minContra,sec,secContra;
 let duracao=0;
 
-window.addEventListener("load", function () {
-    showHistory();
-});
-
 //função chamada ao clicar no botão de iniciar jogo
 function startGame(){
     mostrarDimensao();
@@ -348,105 +344,6 @@ function addHistory(){
             'data_hora':'20/06/2022 - 12:05'
         },
     ]
-
-    function boxHist(jogador){
-        return `
-        <div class="hist-box">
-            <div class="linha-hist">
-                <p class="p-atributo">Nome: </p>
-                <p class="p-info">${jogador.nome}</p>
-            </div>
-            <div class="linha-hist">
-                <p class="p-atributo">Dimensão: </p>
-                <p class="p-info">${jogador.dimensao}</p>
-            </div>
-            <div class="linha-hist">
-                <p class="p-atributo">Modalidade: </p>
-                <p class="p-info">${jogador.modalidade}</p>
-            </div>
-            <div class="linha-hist-dupla">
-                <div class="linha-hist">
-                    <p class="p-atributo">Duração: </p>
-                    <p class="p-info">${jogador.duracao}</p>
-                </div>
-                <div class="linha-hist">
-                    <p class="p-atributo">Resultado: </p>
-                    <p class="p-info">${jogador.resultado}</p>
-                </div>
-            </div>
-            <div class="linha-hist">
-                <p class="p-atributo">Data/Hora: </p>
-                <p class="p-info">${jogador.data_hora}</p>
-            </div>
-        </div>`;
-    }
-
-    document.getElementById('historico').innerHTML +=`
-    ${lista.map(boxHist).join('')}
-    `;
-}
-
-//função que mostra o histórico do jogador
-function showHistory(){
-
-    const lista  = [
-        {
-            'nome':'Joao da Cunha',
-            'dimensao':'4x4',
-            'modalidade':'Contra o Tempo',
-            'duracao':'10:00',
-            'resultado':'Derrota',
-            'data_hora':'20/06/2022 - 12:05'
-        },
-        {
-            'nome':'Joao da Cunha',
-            'dimensao':'4x4',
-            'modalidade':'Contra o Tempo',
-            'duracao':'10:00',
-            'resultado':'Derrota',
-            'data_hora':'20/06/2022 - 12:05'
-        },
-        {
-            'nome':'Joao da Cunha',
-            'dimensao':'4x4',
-            'modalidade':'Contra o Tempo',
-            'duracao':'10:00',
-            'resultado':'Derrota',
-            'data_hora':'20/06/2022 - 12:05'
-        },
-        {
-            'nome':'Joao da Cunha',
-            'dimensao':'4x4',
-            'modalidade':'Contra o Tempo',
-            'duracao':'10:00',
-            'resultado':'Derrota',
-            'data_hora':'20/06/2022 - 12:05'
-        },
-        {
-            'nome':'Joao da Cunha',
-            'dimensao':'4x4',
-            'modalidade':'Contra o Tempo',
-            'duracao':'10:00',
-            'resultado':'Derrota',
-            'data_hora':'20/06/2022 - 12:05'
-        },
-        {
-            'nome':'Joao da Cunha',
-            'dimensao':'4x4',
-            'modalidade':'Contra o Tempo',
-            'duracao':'10:00',
-            'resultado':'Derrota',
-            'data_hora':'20/06/2022 - 12:05'
-        },
-        {
-            'nome':'Joao da Cunha',
-            'dimensao':'4x4',
-            'modalidade':'Contra o Tempo',
-            'duracao':'10:00',
-            'resultado':'Derrota',
-            'data_hora':'20/06/2022 - 12:05'
-        }
-    ];
 
     function boxHist(jogador){
         return `

@@ -19,7 +19,7 @@
         <div class="perfilbox">
             
             <div class = "titulo" id="titulo-editar-perfil">
-                <a href="principal_jogando.html"><img id = "voltar" src="../images/back-arrow-black.svg" alt="retornar"></a>
+                <a href="principal_jogando.php"><img id = "voltar" src="../images/back-arrow-black.svg" alt="retornar"></a>
                 <div>
                     <h2><img src="../images/user-icon.svg" alt="icon nav">Editar Perfil</h2>
                     <hr>
