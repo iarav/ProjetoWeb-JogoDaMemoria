@@ -6,37 +6,27 @@
         $senha = "123456";
 
         //seleciona o id usuario logado no banco de dados para usar como PK
-        $idUsuarioSQL = 
-        "SELECT id_jogador FROM usuario WHERE
-         user = '$user' AND senha = '$senha'";
+        $sql = $conn->query("SELECT id FROM `usuario` WHERE username = '$user' and senha = '$senha'");
+        while ($linha = $sql->fetch(PDO::FETCH_ASSOC)) 
+            $idUsuarioSQL = $linha['id'];
 
         //seleciona o nome usuario logado no banco de dados para usar como PK
-        $nickUsuarioSQL = 
-        "SELECT username FROM usuario WHERE
-         user = '$user' AND senha = '$senha'";
+        $sql = $conn->query("SELECT username FROM `usuario` WHERE id = $idUsuarioSQL");
+        while ($linha = $sql->fetch(PDO::FETCH_ASSOC)) 
+            $nickUsuarioSQL = $linha['username'];
 
         //retorna dados da partida do usuário logado
-        $dadosPartidaSQL = 
-        "select * from PartidaJogo where id_jogador = $idUsuarioSQL";
-
-        //retorna um array com os resultados do sql
-        $sth = $conn->prepare($dadosPartidaSQL);
-        #$resultado = mysql_fetch_assoc($dadosPartidaSQL);
-        //retorna total de linhas da tabela, ou seja, total de partidas no histórico
-        $linhas = mysql_num_rows($dadosPartidaSQL);
-
-        do {
+        $sql = $conn->query("SELECT * FROM PartidaJogo WHERE id_jogador = $idUsuarioSQL");
+        while ($linha = $sql->fetch(PDO::FETCH_ASSOC)) {
             echo $nickUsuarioSQL;
-            echo $resultado['dimensao'];
-            echo $resultado['modalidade'];
-            echo $resultado['tempo_partida'];
-            echo $resultado['resultado'];
-            echo $resultado['pontos'];
-            echo $resultado['horario_partida'];
-        } while ($resultado = mysql_fetch_assoc($dadosPartidaSQL));
-
-        //libera dados da memória
-        mysql_free_result($resultado);
+            echo $linha['dimensao'];
+            echo $linha['modalidade'];
+            echo $linha['tempo_partida'];
+            echo $linha['resultado'];
+            echo $linha['pontos'];
+            echo $linha['horario_partida'];
+        };
+        
     }
     else {
         echo "Não foi possível conectar ao banco MySQL."; exit;
