@@ -195,7 +195,7 @@ function checkVictory(){
     if(pairs==qntImg){
         setTimeout(() => { 
             document.getElementById("winOrLose").innerHTML = "Você Ganhou!";
-            caixaTexto()
+            caixaTexto('Vitória');
             document.getElementById("fim-jogo").style.visibility = "visible";
             clearInterval(intervaloDuracao);
             clearInterval(intervaloTempo);
@@ -205,7 +205,7 @@ function checkVictory(){
     if(minContra ==0 && secContra == 0){
         setTimeout(() => { 
             document.getElementById("winOrLose").innerHTML = "Você Perdeu!";
-            caixaTexto();
+            caixaTexto('Perdeu');
             document.getElementById("fim-jogo").style.visibility = "visible";
             clearInterval(intervaloDuracao);
             clearInterval(intervaloTempo);
@@ -301,13 +301,20 @@ function verifyBoard(idx){
 }
 
 //função que altera a div de fim de jogo
-function caixaTexto(){
+function caixaTexto(resultado){
     let currentDate = `${day}/${month}/${year} - ${hour}:${minutes}`;
     document.getElementById("dim-valor").innerHTML = dimensao + "x" + dimensao;
     document.getElementById("mod-valor").innerHTML = modalidade;
     document.getElementById("dur-valor").innerHTML = duracao ;
     document.getElementById("pont-valor").innerHTML = pairs + "pts";
     document.getElementById("dat-valor").innerHTML = currentDate;
+
+    sessionStorage.setItem("dimensao", dimensao + "x" + dimensao);
+    sessionStorage.setItem("modalidade", modalidade);
+    sessionStorage.setItem("duracao", duracao);
+    sessionStorage.setItem("pontos", pairs);
+    sessionStorage.setItem("tempo", `${year}-${month}-${day} ${hour}:${minutes}`);
+    sessionStorage.setItem("resultado", resultado);
 }
 
 //função que recomeça o jogo com as mesmas configurações

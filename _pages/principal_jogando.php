@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="../_CSSfiles/principal_jogando.css">
     <link rel="stylesheet" href="../_CSSfiles/principal_iniciar.css">
     <script src="../_JSfiles/memoryGame.js"></script>
-    <script src="../_JSfiles/historicoPartidas.js"></script>
     <script src="../_JSfiles/header.js"></script>
+    <script src="../_JSfiles/dadosPartida_ajax.js"></script>
+
 </head>
 
 <body>
@@ -45,10 +46,9 @@
             <div id="iniciar-jogo">
                 <h2>Iniciar Jogo</h2>
                 <hr>
-                <div id="forms">
+                <form id="forms">
                     <div class="dimensao">
                         <h3>Dimensão:</h3>
-                        <form>
                             <input type="radio" id="2x2" name="dimensao" value="2x2">
                             <label for="2x2">2x2</label>
                             <input type="radio" id="4x4" name="dimensao" value="4x4">
@@ -57,52 +57,49 @@
                             <label for="6x6">6x6</label>
                             <input type="radio" id="8x8" name="dimensao" value="8x8">
                             <label for="8x8">8x8</label>
-                        </form> 
                     </div>
                     <div id="modalidade" class="modalidade">
                         <h3>Modalidade:</h3>
-                        <form id="form_jogar">
                             <input type="radio" id="Classica" name="modalidade" value="Classica">
                             <label for="Classica">Clássica</label>
                             <input type="radio" id="ContraTempo" name="modalidade" value="Contra o Tempo">
                             <label for="ContraTempo">Contra o Tempo</label>
-                        </form> 
                     </div>
                     <p id="preencha-tudo">&#x26A0; Preencha todos os campos para continuar!! </p>
                     <div class="botao-jogar">
                         <div class="jogar">
-                            <button onclick="startGame()">Iniciar Jogo</button>
+                            <div id="botao" onclick="startGame()">Iniciar Jogo</div>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div id="jogando">
                 <div id="jogo-box">
                     <div id="fim-jogo">
-                        <h2 id="winOrLose">Você Ganhou!</h2>
+                        <h2 id="winOrLose"></h2>
                         <div class="linha-fim-jogo">
                             <div class="linha-fim">
                                 <p class="p-atributo">Dimensão: </p>
-                                <p id="dim-valor" class="p-info">4x4</p>
+                                <p id="dim-valor" class="p-info"></p>
                             </div>
                             <div class="linha-fim">
                                 <p class="p-atributo">Modalidade: </p>
-                                <p id="mod-valor" class="p-info">Contra o Tempo</p>
+                                <p id="mod-valor" class="p-info"></p>
                             </div>
                         </div>
                         <div class="linha-fim-jogo">
                             <div class="linha-fim">
                                 <p class="p-atributo">Duração: </p>
-                                <p id="dur-valor" class="p-info">10:00</p>
+                                <p id="dur-valor" class="p-info"></p>
                             </div>
                             <div class="linha-fim">
                                 <p class="p-atributo">Data/Hora: </p>
-                                <p id="dat-valor" class="p-info">20/06/2022 - 12:05</p>
+                                <p id="dat-valor" class="p-info"></p>
                             </div>
                         </div>
                         <div class="linha-fim" id="pont-final">
                             <p class="p-atributo">Pontuação Final: </p>
-                            <p id="pont-valor" class="p-info">10pts</p>
+                            <p id="pont-valor" class="p-info"></p>
                         </div>
                         <div class="botoes-fim">
                             <button id="sair" onclick="sair()">
@@ -113,7 +110,6 @@
                             </button>
                         </div>
                     </div>
-
 
                     <div class="cartas-memoria">
                         <div id="cartas-2x2">
@@ -159,6 +155,8 @@
                 </div>
             </div>
         </div>
+        
+    <?php include_once('../_PHPfiles/dadosUsuario.php'); ?>
     </div>
 </body>
 </html>

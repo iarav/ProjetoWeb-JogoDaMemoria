@@ -53,6 +53,9 @@
             catch(PDOException $e){
                 echo "Connection failed: " . $e->getMessage();
             }
+
+            //encerra conexão com banco de dados
+            $conn = null;
         }
     }
 
