@@ -1,29 +1,27 @@
-<?php
+<?php 
+    //da start em sessão
+    session_start();
+
     $user = [$_POST['username'], $_POST['senha']];
     $mensagem = [];
     
-    // echo "$user - $password - $res";
-    //enviar dados para o banco de dados
+    //cria conexão cm DB
     include_once('conexaoDB.php');
-    
-    // $user = "joa";
-    // $password = "123456";
     
 
     if (isset($conn)) {
         $sql = $conn->query("SELECT count(*) as qnt FROM usuario WHERE username = '$user[0]' and senha = '$user[1]'");
         $res = null;
 
-
         while ($linha = $sql->fetch(PDO::FETCH_ASSOC)) 
             $res = $linha['qnt'];
         
-        
-
         if($res == 0){
             $mensagem = ['login invalido'];
         }else{
             $mensagem = ['login valido'];
+            //cria a var "logged" para as outras paginas
+            $_SESSION['logged'] = $user[0];
         }
 
         //encerra conexão com DB
