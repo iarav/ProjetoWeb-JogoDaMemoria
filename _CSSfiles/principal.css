@@ -34,6 +34,7 @@
 }
 
 #historico{
+    text-align: center;
     width: 22vw;
     height: 86vh;
     background: var(--cinza-fundo);

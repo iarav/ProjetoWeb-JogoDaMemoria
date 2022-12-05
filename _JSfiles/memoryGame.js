@@ -343,12 +343,12 @@ function addHistory(){
 
     const lista  = [
         {
-            'nome':'Luis Francisco',
-            'dimensao':'4x4',
-            'modalidade':'Contra o Tempo',
-            'duracao':'10:00',
-            'resultado':'Derrota',
-            'data_hora':'20/06/2022 - 12:05'
+            'nome':`${sessionStorage.getItem("username")}`,
+            'dimensao':`${sessionStorage.getItem("dimensao")}`,
+            'modalidade':`${sessionStorage.getItem("modalidade")}`,
+            'duracao':`${sessionStorage.getItem("duracao")}`,
+            'resultado':`${sessionStorage.getItem("resultado")}`,
+            'data_hora':`${sessionStorage.getItem("tempo")}`
         },
     ]
 
