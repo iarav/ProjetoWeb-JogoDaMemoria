@@ -23,37 +23,36 @@
                     <h2>Cadastro</h2>
                 </div>
             </div>
-
-            <form method="post" class="d-flex">
+            <form action="dadosCadastro.php" method="post" class="d-flex">
                 <div class="txt_field">
-                    <input type="text" required id="Username" placeholder="Username">
+                    <input type="text" required id="Username" placeholder="Username" name="Username">
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" required id="NomeCompleto" placeholder="Nome Completo">
+                    <input type="text" required id="NomeCompleto" placeholder="Nome Completo" name="NomeCompleto">
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" required id="Telefone" placeholder="Telefone">
+                    <input type="text" required id="Telefone" placeholder="Telefone" name="Telefone">
                 </div>
 
                 <div class="txt_field">
-                    <input type="text" required id="E-mail" placeholder="E-mail">
+                    <input type="text" required id="E-mail" placeholder="E-mail" name="E-mail">
                 </div>
 
                 <div class="txt_field2">
-                    <input type="date" required id="datadenascimento">
-                    <input type="text" required id="CPF" placeholder="CPF">
+                    <input type="date" required id="datadenascimento" name="datadenascimento">
+                    <input type="text" required id="CPF" placeholder="CPF" name="CPF">
                 </div>
 
                 <div class="txt_field">
-                    <input type="password" required id="Password" placeholder="Password">
+                    <input type="password" required id="Password" placeholder="Password" name="Password">
                 </div>
 
                 <p id="preencha-tudo">&#x26A0; Preencha todos os campos para continuar!! </p>
 
-                <div class="Botao_cadastrar">
-                    <a class="cadastrar" onclick="getUserCad()" >Cadastrar</a>
+                <div>
+                    <input type="submit" class="cadastrar" value="Cadastrar">
                 </div>
             </form>
         </div>
