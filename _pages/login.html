@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../_CSSfiles/forms.css">
     <link rel="stylesheet" href="../_CSSfiles/global.css">
     <script src="../_JSfiles/forms.js"></script>
+    <script src="../_JSfiles/login_ajax.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@
             <h2>Login</h2>
             <hr style="height:1px;left:437px;top:251px;border-width:0;width:405.03px;background-color:rgb(0, 0, 0, 0.6)">
 
-            <form method="post" class="d-flex">
+            <form method="post" class="d-flex" action = "autenticacao.php">
 
                 <div class="txt_field">
                     <input type="text" required id="Username" placeholder="Username">
@@ -37,7 +38,7 @@
 
                 <div class="Botao_entrar">
                     <div class="entrar">
-                        <a id="entrar" onclick="getUserLog()">Entrar</a>
+                        <input type="button" id="entrar" onclick="getUserLog()">Entrar</input>
                     </div>
                 </div>
             </form>

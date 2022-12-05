@@ -50,7 +50,7 @@ function checkCadform(u){
             return 0;
         }
     }
-    document.getElementsByClassName("cadastrar")[0].href="login.php";
+    document.getElementsByClassName("cadastrar")[0].href="login.html";
 }
 
 function checkLogForm(l, p){
