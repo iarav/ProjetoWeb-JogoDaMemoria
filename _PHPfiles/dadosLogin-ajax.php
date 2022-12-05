@@ -1,13 +1,25 @@
 <?php
+    $user = isset($_POST['username']) ? $_POST['username'] : '';
+    $password = isset($_POST['senha']) ? $_POST['senha'] : '';
+    $mensagem = [];
+    
+    //enviar dados para o banco de dados
+    include_once('conexaoDB.php');
+    
+    
 
-$username = isset($_POST['Username']) ? $_POST['Username'] : '';
-$senha = isset($_POST['Senha']) ? $_POST['Senha'] : '';
+    if (isset($conn)) {
+        $sql = $conn->query("SELECT count(*) FROM `usuario` WHERE username = '$user' and senha = '$password'");
 
-$sql = $conn->query("SELECT count(*) FROM `usuario` WHERE username = '$username' and senha = '$senha'");
-if($sql == 0){
-    echo json_encode(array("mensagem" => "Login invalido!"));
-}else{
-    echo json_encode(array("mensagem" => "Login valido!"));
-}
+        if($sql == 0){
+            $mensagem = ['login invalido'];
+        }else{
+            $mensagem = ['login valido'];
+        }
 
+        //encerra conexão com DB
+        $conn = null;
+    }
+    
+    echo json_encode($mensagem);
 ?>

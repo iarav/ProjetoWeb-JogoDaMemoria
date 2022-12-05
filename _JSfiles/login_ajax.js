@@ -1,8 +1,6 @@
 function login(){
 
-    var botao1 = document.getElementById("entrar");
-
-
+    var botao = document.getElementById("entrar");
     var username = document.getElementById("Username").value;
     var senha = document.getElementById("Senha").value;
 
@@ -19,11 +17,10 @@ function login(){
         }
     }
 
-    botao1.addEventListener("click",function(){
-        console.log("clicou");
+    botao.addEventListener("click",function(){
         var formdata= new FormData();
-        formdata.append("Username", username);
-        formdata.append("Senha", senha);
+        formdata.append("username", username);
+        formdata.append("senha", senha);
         
         ajax.open('POST','../_PHPfiles/dadosLogin-ajax.php');
 
@@ -43,7 +40,6 @@ function login(){
                 
                 if (respostaAjax) {
                     console.log(respostaAjax);
-                       
                 }
             };
     });
