@@ -32,7 +32,7 @@
                     <div id="triangulo-para-cima"></div>
                     <div id="textos">
                         <a href="./editar_perfil.php">Editar perfil</a>
-                        <a href="./login.php">Sair</a>
+                        <a href="./login.html">Sair</a>
                     </div>
                 </div>
             </div>
