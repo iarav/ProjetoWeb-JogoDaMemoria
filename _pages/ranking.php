@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +12,13 @@
     <script src="../_JSfiles/header.js"></script>
     <title>Jogo da Memória | Ranking</title>
 </head>
+
 <body>
     <header>
         <h1>Jogo da Memória</h1>
-        <a class="ranking-a" href="./principal_jogando.php"><p>Página do Jogo</p></a>
+        <a class="ranking-a" href="./principal_jogando.php">
+            <p>Página do Jogo</p>
+        </a>
         <div id='nav' onclick="abrirLogout()">
             <div id="user">
                 <img src="../images/user-icon.svg" alt="icon nav">
@@ -33,15 +37,29 @@
     <div id="conteudo">
         <div id="painel">
             <div id="titulo">
-                <a href="principal_jogando.html"><img id = "voltar" src="../images/back-arrow-pink.svg" alt="retornar"></a>
+                <a href="principal_jogando.php"><img id="voltar" src="../images/back-arrow-pink.svg" alt="retornar"></a>
                 <div>
                     <img src="../images/bolinho.svg" alt="bolinho">
                     <h1>Ranking</h1>
                 </div>
-                
+
             </div>
-            <ul id="tabela"></ul>          
+            <ul id="tabela">
+                <?php include_once('../_PHPfiles/queryRanking.php'); ?>
+                <script>
+                    let dadosRanking = (<?= json_encode($rankingData) ?>)
+                    let html = `   <li>
+                        <div class="coluna1"><p>Ingredientes</p></div>
+                            <div class="coluna2"><p>Modo de preparo</p></div>
+    </li > `
+                    for (let i = 0; i < dadosRanking.length; i++) {
+                        html += listaJogadores(dadosRanking[i]);
+                    }
+                    document.getElementById("tabela").innerHTML = html
+                </script>
+            </ul>
         </div>
     </div>
 </body>
+
 </html>
