@@ -1,8 +1,8 @@
 function login(){
 
     var botao = document.getElementById("entrar");
-    var username = document.getElementById("Username").value;
-    var senha = document.getElementById("Senha").value;
+    // var username = document.getElementById("Username").value;
+    // var senha = document.getElementById("Senha").value;
 
     var ajax = new XMLHttpRequest();
 
@@ -18,12 +18,16 @@ function login(){
     }
 
     botao.addEventListener("click",function(){
-        var formdata= new FormData();
-        formdata.append("username", username);
-        formdata.append("senha", senha);
+        let username = document.getElementById("Username").value
+        let senha = document.getElementById("Senha").value
         
-        ajax.open('POST','../_PHPfiles/dadosLogin-ajax.php');
+        var formdata= new FormData();
+        formdata.append('username', username);
+        formdata.append('username2', senha);
+        formdata.append('senha', senha);
 
+
+        ajax.open('POST','../_PHPfiles/dadosLogin-ajax.php');
             //envia a requisição
             ajax.send(formdata);
 
@@ -32,6 +36,7 @@ function login(){
             ajax.onload = function(){
                 //transforma em JSON
                 let respostaAjax = null;
+                
                 try {
                     respostaAjax = JSON.parse(ajax.responseText);
                 } catch (e) {
@@ -39,21 +44,17 @@ function login(){
                 };
                 
                 if (respostaAjax) {
-                    console.log(respostaAjax);
+                    if(respostaAjax[0]=="login invalido"){
+                        alert("Login ou senha incorretos, tente novamente!")
+                    }else{
+                        //ENTRA NO JOGO
+                    }
                 }
             };
     });
 }
 
-
-
-
-
-
-
-
 window.addEventListener('load', function(){
     login();
-    
 });
 
