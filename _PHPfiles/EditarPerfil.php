@@ -1,30 +1,30 @@
 <?php
-    if (isset($_POST["NomeCompleto"])&&($_POST["Telefone"])&&($_POST["Email"])&&($_POST["Password"])) {
-        
-        include_once('conexaoDB.php');
-        if (isset($conn)) {
-            try {
-                $sql = "UPDATE usuario SET nome_completo='" 
-                . $_POST["NomeCompleto"] 
-                . "', telefone='" 
-                . $_POST["Telefone"] 
-                . "', email='"
-                . $_POST["Email"]
-                . "', senha='"
-                . $_POST["Password"]
-                . "' WHERE username='"
-                . $_POST["Username"]
-                . "' " ;
+    $mensagem = [];
+    $dados = [$_POST["nome_completo"], $_POST["telefone"], $_POST["email"], $_POST["senha"], $_POST["user"]];
 
-                $conn->exec($sql);
-                
-                //header("Location: ../_pages/principal_jogando.php");
-                
-                exit();
+    include_once('conexaoDB.php');
+    if (isset($conn)) {
+        try {
+            $sql = "UPDATE usuario SET nome_completo='" 
+            . $dados[0] 
+            . "', telefone='" 
+            . $dados[1]
+            . "', email='"
+            . $dados[2]
+            . "', senha='"
+            . $dados[3]
+            . "' WHERE username='"
+            . $dados[4]
+            . "' " ;
 
-            } catch (PDOException $e) {
-                echo "Ocorreu um erro: " . $e->getMessage();
-            }
+            $conn->exec($sql);
+            
+            $mensagem = ['atualizado com sucesso'];
+            
+
+        } catch (PDOException $e) {
+            $mensagem = ['ocorreu um erro'];
         }
     }
+    echo json_encode($mensagem);
 ?>

@@ -19,6 +19,16 @@
             $senha = $linha['senha'];
             
         };
+        echo "
+        <script>
+            sessionStorage.setItem('user', '" . $user . "');
+            sessionStorage.setItem('nome_completo', '" . $nomeCompleto . "');
+            sessionStorage.setItem('telefone', '" . $telefone . "');
+            sessionStorage.setItem('email', '" . $email . "');
+            sessionStorage.setItem('senha', '" . $senha . "');
+        </script>";
+        
+
         //Fecha conexão com banco de dados 
         $conn = NULL;
 
@@ -57,12 +67,6 @@
 
         <div class='txt_field'>
             <input type='password' required id='Password' value='" . $senha . "' placeholder='Password' name='Password'>
-        </div>
-
-        <p id='preencha-tudo'>&#x26A0; Preencha todos os campos para continuar!! </p>
-
-        <div class='Botao_salvar'>
-            <input type='submit' class='salvar' value='Salvar'>
         </div>
     ";
 ?>

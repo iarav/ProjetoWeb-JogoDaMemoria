@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../_CSSfiles/global.css">
     <link rel="stylesheet" href="../_CSSfiles/forms.css">
     <script src="../_JSfiles/forms.js"></script>
+    <script src="../_JSfiles/dadosEditarPerfil_ajax.js"></script>
     <title>Editar Perfil</title>
 </head>
 
@@ -30,8 +31,14 @@
             <!-- <h2><img src="../images/user-icon.svg" alt="icon nav"/> Editar Perfil</h2>
             <hr> -->
 
-            <form method="post" action="../_PHPfiles/EditarPerfil.php" class="d-flex">
+            <form method="post" class="d-flex">
                 <?php include_once('../_PHPfiles/dadosPerfil.php'); ?>
+                
+                <p id='preencha-tudo'>&#x26A0; Preencha todos os campos para continuar!! </p>
+
+                <div class='Botao_salvar'>
+                    <input type='submit' id='salvar' class='salvar' value='Salvar'>
+                </div>
             </form>
             
         </div>
