@@ -23,7 +23,6 @@ function login(){
         
         var formdata= new FormData();
         formdata.append('username', username);
-        formdata.append('username2', senha);
         formdata.append('senha', senha);
 
 

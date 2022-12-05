@@ -30,37 +30,8 @@
             <!-- <h2><img src="../images/user-icon.svg" alt="icon nav"/> Editar Perfil</h2>
             <hr> -->
 
-            <form method="post" class="d-flex">
-                <div class="txt_field">
-                    <input type="text" required id="Username" placeholder="Username" readonly>
-                </div>
-
-                <div class="txt_field">
-                    <input type="text" required id="NomeCompleto" placeholder="Nome Completo">
-                </div>
-
-                <div class="txt_field">
-                    <input type="text" required id="Telefone" placeholder="Telefone">
-                </div>
-
-                <div class="txt_field">
-                    <input type="text" required id="E-mail" placeholder="E-mail">
-                </div>
-
-                <div class="txt_field2">
-                    <input type="date" required id="datadenascimento" readonly>
-                    <input type="text" required id="CPF" placeholder="CPF" readonly>
-                </div>
-
-                <div class="txt_field">
-                    <input type="password" required id="Password" placeholder="Password">
-                </div>
-
-                <p id="preencha-tudo">&#x26A0; Preencha todos os campos para continuar!! </p>
-
-                <div class="Botao_salvar">
-                    <a class="salvar" onclick="getUserEdit()">Salvar</a>
-                </div>
+            <form method="post" action="../_PHPfiles/EditarPerfil.php" class="d-flex">
+                <?php include_once('../_PHPfiles/dadosPerfil.php'); ?>
             </form>
             
         </div>
