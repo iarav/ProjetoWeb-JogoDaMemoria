@@ -23,7 +23,7 @@
                     <h2>Cadastro</h2>
                 </div>
             </div>
-            <form action="dadosCadastro.php" method="post" class="d-flex">
+            <form action="../_PHPfiles/dadosCadastro.php" method="post" class="d-flex">
                 <div class="txt_field">
                     <input type="text" required id="Username" placeholder="Username" name="Username">
                 </div>
