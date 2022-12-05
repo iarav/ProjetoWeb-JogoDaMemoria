@@ -70,5 +70,4 @@ function requisicao(){
 }
 window.addEventListener('load', function(){
     requisicao();
-    //reseteAjax();
 });
