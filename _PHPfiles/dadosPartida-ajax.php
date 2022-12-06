@@ -11,6 +11,7 @@
 
     if (isset($conn)) {
         try{
+            session_start();
             $user = $_SESSION['logged'];
 
             //seleciona o id usuario logado no banco de dados para usar como PK

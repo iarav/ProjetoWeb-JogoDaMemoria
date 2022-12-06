@@ -16,7 +16,6 @@
         $_GET["logout"] = false;
     if ($_GET["logout"] == "true") {
         session_destroy();
-        echo "<script>alert('Sessão destruida')</script>";
     }
 ?>
 <body>

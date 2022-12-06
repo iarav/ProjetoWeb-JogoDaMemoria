@@ -30,7 +30,7 @@
         <div id='nav' onclick="abrirLogout()">
             <div id="user">
                 <img src="../images/user-icon.svg" alt="icon nav">
-                <p><?php $_SESSION['logged'] ?></p>
+                <p><?php echo $_SESSION['logged'] ?></p>
             </div>
             <div id='logout'>
                 <div>
