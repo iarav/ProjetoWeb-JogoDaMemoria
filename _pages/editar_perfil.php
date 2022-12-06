@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../_CSSfiles/global.css">
     <link rel="stylesheet" href="../_CSSfiles/forms.css">
     <script src="../_JSfiles/forms.js"></script>
+    <script src="../_JSfiles/dadosEditarPerfil_ajax.js"></script>
     <title>Editar Perfil</title>
 </head>
 
@@ -31,35 +32,12 @@
             <hr> -->
 
             <form method="post" class="d-flex">
-                <div class="txt_field">
-                    <input type="text" required id="Username" placeholder="Username" readonly>
-                </div>
+                <?php include_once('../_PHPfiles/dadosPerfil.php'); ?>
+                
+                <p id='preencha-tudo'>&#x26A0; Preencha todos os campos para continuar!! </p>
 
-                <div class="txt_field">
-                    <input type="text" required id="NomeCompleto" placeholder="Nome Completo">
-                </div>
-
-                <div class="txt_field">
-                    <input type="text" required id="Telefone" placeholder="Telefone">
-                </div>
-
-                <div class="txt_field">
-                    <input type="text" required id="E-mail" placeholder="E-mail">
-                </div>
-
-                <div class="txt_field2">
-                    <input type="date" required id="datadenascimento" readonly>
-                    <input type="text" required id="CPF" placeholder="CPF" readonly>
-                </div>
-
-                <div class="txt_field">
-                    <input type="password" required id="Password" placeholder="Password">
-                </div>
-
-                <p id="preencha-tudo">&#x26A0; Preencha todos os campos para continuar!! </p>
-
-                <div class="Botao_salvar">
-                    <a class="salvar" onclick="getUserEdit()">Salvar</a>
+                <div class='Botao_salvar'>
+                    <input type='submit' id='salvar' class='salvar' value='Salvar'>
                 </div>
             </form>
             
