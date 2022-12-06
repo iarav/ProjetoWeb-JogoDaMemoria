@@ -4,7 +4,7 @@
     include_once('conexaoDB.php');
 
     if (isset($conn)) {
-        $user = "iv";
+        $user = $_SESSION['logged'];
 
         //seleciona o id usuario logado no banco de dados para usar como PK
         $sql = $conn->query("SELECT * FROM `usuario` WHERE username = '$user'");

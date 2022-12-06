@@ -2,7 +2,7 @@
     //se a pessoa não escolheu nenhuma cadeira, ou não está logado
     session_start();
     if (!isset($_SESSION['logged'])){
-        header('Location:../_pages/login.html', true, 301);
+        header('Location:../_pages/login.php', true, 301);
     }
 ?>
 
@@ -41,7 +41,7 @@
                     <div id="triangulo-para-cima"></div>
                     <div id="textos">
                         <a href="./editar_perfil.php">Editar perfil</a>
-                        <a href="./login.html?logout=true">Sair</a>
+                        <a href="./login.php?logout=true">Sair</a>
                     </div>
                 </div>
             </div>
