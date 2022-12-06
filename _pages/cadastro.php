@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../_CSSfiles/global.css">
     <link rel="stylesheet" href="../_CSSfiles/forms.css">
-    <script src="../_JSfiles/forms.js"></script>
+    <script src="../_JSfiles\cadastro_ajax.js"></script>
     <title>Cadastro</title>
 </head>
 
@@ -23,7 +23,7 @@
                     <h2>Cadastro</h2>
                 </div>
             </div>
-            <form action="dadosCadastro.php" method="post" class="d-flex">
+            <form method="post" class="d-flex">
                 <div class="txt_field">
                     <input type="text" required id="Username" placeholder="Username" name="Username">
                 </div>
@@ -52,7 +52,7 @@
                 <p id="preencha-tudo">&#x26A0; Preencha todos os campos para continuar!! </p>
 
                 <div>
-                    <input type="submit" class="cadastrar" value="Cadastrar">
+                    <input type="submit" id="cadastrar" value="Cadastrar">
                 </div>
             </form>
         </div>
