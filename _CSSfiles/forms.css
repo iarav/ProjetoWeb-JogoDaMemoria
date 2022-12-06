@@ -132,7 +132,7 @@ form .Sem_cadastro{
     color: var(--link);
 }
 
-.entrar, .cadastrar, .salvar{
+.cadastrar, .salvar{
     text-align: center;
     cursor: pointer;
     color: var(--preto);
@@ -142,6 +142,21 @@ form .Sem_cadastro{
     padding:0;
     width: 100%;
     border-radius: 15px;
+}
+
+#entrar{
+    text-align: center;
+    cursor: pointer;
+    color: var(--preto);
+    border: 0 none;
+    background: var(--verde-botao);
+    margin: 0px;
+    padding:10px 25px;
+    border-radius: 15px;
+    font-family: laila;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
 }
 
 .cadastrar, .salvar {

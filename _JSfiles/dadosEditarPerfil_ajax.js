@@ -1,5 +1,4 @@
 function requisicao(){
-    //botao "jogar-novamente" e "sair" no painel de WinOrLose
     var botao= document.getElementById('salvar');  
     
     //cria a instância

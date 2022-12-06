@@ -43,11 +43,7 @@
                     <a href="./cadastro.php">Não tem cadastro? Cadastre-se aqui</a>
                 </div>
 
-                <div class="Botao_entrar">
-                    <div class="entrar">
-                        <input type="button" id="entrar" onclick="getUserLog()">Entrar</input>
-                    </div>
-                </div>
+                <input type="button" id="entrar" value="Entrar" onclick="getUserLog()"/>
             </form>
         </div>
     </div>

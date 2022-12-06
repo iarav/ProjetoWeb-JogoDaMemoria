@@ -46,7 +46,8 @@ function login(){
                     if(respostaAjax[0]=="login invalido"){
                         alert("Login ou senha incorretos, tente novamente!")
                     }else{
-                        window.location.href = "../_pages/principal_jogando.php";
+                        if(respostaAjax[0]!="dados incompletos")
+                            window.location.href = "../_pages/principal_jogando.php";
                     }
                 }
             };
