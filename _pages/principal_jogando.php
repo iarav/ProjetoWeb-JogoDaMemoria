@@ -1,9 +1,12 @@
 <?php
     //se a pessoa não escolheu nenhuma cadeira, ou não está logado
+    session_start();
     if (!isset($_SESSION['logged'])){
         header('Location:../_pages/login.html', true, 301);
     }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,14 +34,14 @@
         <div id='nav' onclick="abrirLogout()">
             <div id="user">
                 <img src="../images/user-icon.svg" alt="icon nav">
-                <p>Usuario</p>
+                <p><?php echo $_SESSION['logged'] ?></p>
             </div>
             <div id='logout'>
                 <div>
                     <div id="triangulo-para-cima"></div>
                     <div id="textos">
                         <a href="./editar_perfil.php">Editar perfil</a>
-                        <a href="./login.html">Sair</a>
+                        <a href="./login.html?logout=true">Sair</a>
                     </div>
                 </div>
             </div>

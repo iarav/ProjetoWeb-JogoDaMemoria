@@ -18,7 +18,7 @@
     <div id="conteudo">
         <div class="cadastrobox">
             <div class = "titulo">
-                <a href="./login.html"><img id = "voltar" src="../images/back-arrow-black.svg" alt="retornar"></a>
+                <a href="./login.php"><img id = "voltar" src="../images/back-arrow-black.svg" alt="retornar"></a>
                 <div>
                     <h2>Cadastro</h2>
                 </div>

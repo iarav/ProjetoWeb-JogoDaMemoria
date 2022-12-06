@@ -4,7 +4,7 @@
 
     $user = [$_POST['username'], $_POST['senha']];
     $mensagem = [];
-    
+    $_SESSION['logged'] = null;
     //cria conexão cm DB
     include_once('conexaoDB.php');
     

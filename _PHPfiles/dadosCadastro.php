@@ -21,7 +21,7 @@
 
                     $conn->exec($sql);
 
-                    header("Location: ../_pages/login.html");
+                    header("Location: ../_pages/login.php");
                     echo "<script>
                         alert('Usuário cadastrado com sucesso!');
                         </script>";

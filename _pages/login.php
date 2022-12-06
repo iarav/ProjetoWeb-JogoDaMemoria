@@ -10,7 +10,15 @@
     <script src="../_JSfiles/forms.js"></script>
     <script src="../_JSfiles/login_ajax.js"></script>
 </head>
-
+<?php
+    session_start();
+    if(!isset($_GET["logout"]))
+        $_GET["logout"] = false;
+    if ($_GET["logout"] == "true") {
+        session_destroy();
+        echo "<script>alert('Sessão destruida')</script>";
+    }
+?>
 <body>
     <header>
         <h1>Jogo da Memória</h1>
