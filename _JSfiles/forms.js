@@ -60,7 +60,7 @@ function checkLogForm(l, p){
         setTimeout(() => document.getElementById("preencha-tudo").style.animation="preencha 0.3s linear", 5);
         return 0;
     }
-    document.getElementById("entrar").href="./principal_jogando.html"
+    document.getElementById("entrar").href="./principal_jogando.php"
 }
 
 function checkEditform(u){

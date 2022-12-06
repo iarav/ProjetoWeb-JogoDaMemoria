@@ -55,7 +55,7 @@ function cadastro(){
                 if (respostaAjax) {
                     if(respostaAjax[0]=="Usuário inválido"){
                         alert("Esse nome de usuário já existe!")
-                    }else{
+                    if(respostaAjax[0]!="Dados incompletos")
                         alert("Usuário criado com sucesso!")
                         window.location.href = "../_pages/login.php";
 
