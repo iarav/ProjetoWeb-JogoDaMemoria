@@ -57,7 +57,7 @@ function cadastro(){
                         alert("Esse nome de usuário já existe!")
                     }else{
                         alert("Usuário criado com sucesso!")
-                        window.location.href = "../_pages/login.html";
+                        window.location.href = "../_pages/login.php";
 
                     }
                 }
