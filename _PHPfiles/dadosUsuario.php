@@ -4,11 +4,10 @@
     include_once('conexaoDB.php');
 
     if (isset($conn)) {
-        $user = "joao";
-        $senha = "123456";
+        $user = $_SESSION['logged'];
 
         //seleciona o id usuario logado no banco de dados para usar como PK
-        $sql = $conn->query("SELECT id FROM `usuario` WHERE username = '$user' and senha = '$senha'");
+        $sql = $conn->query("SELECT id FROM `usuario` WHERE username = '$user'");
         while ($linha = $sql->fetch(PDO::FETCH_ASSOC)) 
             $idUsuarioSQL = $linha['id'];
 

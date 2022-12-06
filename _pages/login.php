@@ -10,7 +10,14 @@
     <script src="../_JSfiles/forms.js"></script>
     <script src="../_JSfiles/login_ajax.js"></script>
 </head>
-
+<?php
+    session_start();
+    if(!isset($_GET["logout"]))
+        $_GET["logout"] = false;
+    if ($_GET["logout"] == "true") {
+        session_destroy();
+    }
+?>
 <body>
     <header>
         <h1>Jogo da Memória</h1>
@@ -36,11 +43,7 @@
                     <a href="./cadastro.php">Não tem cadastro? Cadastre-se aqui</a>
                 </div>
 
-                <div class="Botao_entrar">
-                    <div class="entrar">
-                        <input type="button" id="entrar" onclick="getUserLog()">Entrar</input>
-                    </div>
-                </div>
+                <input type="button" id="entrar" value="Entrar" onclick="getUserLog()"/>
             </form>
         </div>
     </div>

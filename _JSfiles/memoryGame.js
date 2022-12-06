@@ -335,7 +335,10 @@ function jogarNovamente(){
 
 //função que sai do jogo e volta para o formulário inicial
 function sair(){
-    window.location.reload(true);
+    function Recarregar(){
+        window.location.reload(true);
+    }
+    setTimeout(Recarregar, 700);
 }
 
 //função que adiciona o resultado do jogo no histórico

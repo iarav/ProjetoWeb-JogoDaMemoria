@@ -1,3 +1,11 @@
+<?php
+    //se a pessoa não escolheu nenhuma cadeira, ou não está logado
+    session_start();
+    if (!isset($_SESSION['logged'])){
+        header('Location:../_pages/login.php', true, 301);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
